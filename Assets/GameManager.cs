@@ -47,6 +47,7 @@ public class GameManager : Singleton<GameManager>
             _spawnInGrid.SetPosition(_position);
             _spawnInGrid.SetRotation(_rotation);
             return _spawnInGrid;
+
         }
     }
 }

@@ -47,6 +47,7 @@ namespace ExampleProject.Tools
                     _resource = Resources.Load<ResourceType>(this.resourcePath);
                 }
                 this.loadedResource = _resource;
+                //
                 return this.loadedResource;
             }
         }
