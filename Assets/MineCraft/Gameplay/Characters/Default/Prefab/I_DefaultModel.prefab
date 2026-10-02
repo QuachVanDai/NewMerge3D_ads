@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1028105103016169449
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_Name
+      value: I_DefaultModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 348ba29143c6d4d46ac67e6f1d465108, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8454778209320994267}
+  m_SourcePrefab: {fileID: 100100000, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+--- !u!1 &181826190725001912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98ada0b3755cac044b57a1cd53fa6c8a, type: 3}
+  m_PrefabInstance: {fileID: 1028105103016169449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8454778209320994267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181826190725001912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 176bc3f369a0346b98c0b92a3c93aed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackAnim: {fileID: 7400000, guid: ad3ef2e57592b534eb127f4c78fe8c8b, type: 2}
+  deathAnim: {fileID: 7400000, guid: 9125c5f6db891f44cbf87f8d70b7de74, type: 2}
+  runAnim: {fileID: 7400000, guid: 5706bb2f4849ab04b8d376b8b4b22c61, type: 2}
+  idleAnim: {fileID: 7400000, guid: 5ca42548478c5c943a0185c69fe96db3, type: 2}
+  pickAnim: {fileID: 7400000, guid: f2cb6b70441f4534d9a6984c964760af, type: 2}
+  jumpAnim: {fileID: 7400000, guid: 8aa2ff1acf50b514a901b02071f7b90e, type: 2}
+  victoryAnim:
+  - {fileID: 7400000, guid: 7d1c429af4893704494e7d2b62576899, type: 2}
+  - {fileID: 7400000, guid: 20258172914ef984d9a7942faaea1b3f, type: 2}
+  - {fileID: 7400000, guid: 6bc90a383e1f73945bac66ac717049b5, type: 2}
+  - {fileID: 7400000, guid: 33a0cffc1133afd4a8a0d226f0458149, type: 2}
+  spawnAnim: {fileID: 7400000, guid: 5458e7c539bea0449882b301f94ba969, type: 2}
