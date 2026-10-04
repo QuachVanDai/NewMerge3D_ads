@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using ExampleProject.Tools;
 
 namespace ExampleProject.Gameplay.Faction
 {

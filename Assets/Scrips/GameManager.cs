@@ -19,6 +19,7 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         StartCoroutine(Init());
+       
     }
     public IEnumerator Init()
     {
@@ -29,6 +30,7 @@ public class GameManager : Singleton<GameManager>
         yield return StartCoroutine(FriendlyGridManager.SpawnFriendlyTiles());
         MergeModeController.Init();
         EnemyController.Init();
+         StartCoroutine(ZoomToBoss());
     }
     void SpawnSpawnGrid()
     {
@@ -49,5 +51,9 @@ public class GameManager : Singleton<GameManager>
             return _spawnInGrid;
 
         }
+    }
+    IEnumerator ZoomToBoss(){
+        yield return null;
+
     }
 }

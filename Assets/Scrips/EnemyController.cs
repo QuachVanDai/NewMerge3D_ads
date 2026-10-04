@@ -29,7 +29,7 @@ public class EnemyController : Singleton<EnemyController>
 
     private void OnValidate()
     {
-        SortBaseUnitsBySpawnIndex();
+       // SortBaseUnitsBySpawnIndex();
     }
 
     private void SortBaseUnitsBySpawnIndex()
