@@ -1,0 +1,925 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: A_MineCraft_Runner_SSJ2_Run
+  serializedVersion: 7
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.38868496, y: 0.38868466, z: -0.5906981, w: 0.5906979}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.38868496, y: 0.38868466, z: -0.5906981, w: 0.5906979}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0, y: -0.47725686, z: -0, w: 0.87876385}
+        inSlope: {x: 0, y: -0.009918451, z: 0, w: -0.0053901672}
+        outSlope: {x: 0, y: -0.009918451, z: 0, w: -0.0053901672}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5416667
+        value: {x: 0, y: -0.4850485, z: -0, w: 0.8744873}
+        inSlope: {x: 0, y: 0.040879022, z: 0, w: 0.022670036}
+        outSlope: {x: 0, y: 0.040879022, z: 0, w: 0.022670036}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0, y: -0.47725686, z: -0, w: 0.87876385}
+        inSlope: {x: 0, y: 0.008098837, z: 0, w: 0.004400251}
+        outSlope: {x: 0, y: 0.008098837, z: 0, w: 0.004400251}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Head
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.09922076, y: 0.728177, z: -0.6253208, w: -0.26246405}
+        inSlope: {x: -0.03600204, y: -0.0052986145, z: 0.011758804, w: -0.028922796}
+        outSlope: {x: -0.03600204, y: -0.0052986145, z: 0.011758804, w: -0.028922796}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.45833334
+        value: {x: -0.13567075, y: 0.72189, z: -0.61278087, w: -0.29149258}
+        inSlope: {x: 0.084547326, y: 0.016758438, z: -0.0305221, w: 0.06668399}
+        outSlope: {x: 0.084547326, y: 0.016758438, z: -0.0305221, w: 0.06668399}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -0.09922076, y: 0.728177, z: -0.6253208, w: -0.26246405}
+        inSlope: {x: 0.029407188, y: 0.004323004, z: -0.009600158, w: 0.023627032}
+        outSlope: {x: 0.029407188, y: 0.004323004, z: -0.009600158, w: 0.023627032}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Arm_01_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.6418583, y: 0.7668233, z: -7.6519e-18, w: -8.6256866e-17}
+        inSlope: {x: 0.009517193, y: -0.00797081, z: 1.0708151e-18, w: -9.481475e-20}
+        outSlope: {x: 0.009517193, y: -0.00797081, z: 1.0708151e-18, w: -9.481475e-20}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5
+        value: {x: 0.65406436, y: 0.756439, z: -6.268638e-18, w: -8.636842e-17}
+        inSlope: {x: -0.05820176, y: 0.050303914, z: -6.644062e-18, w: 4.836821e-19}
+        outSlope: {x: -0.05820176, y: 0.050303914, z: -6.644062e-18, w: 4.836821e-19}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.6418583, y: 0.7668233, z: -7.6519e-18, w: -8.6256866e-17}
+        inSlope: {x: -0.007749077, y: 0.006488797, z: -8.71795e-19, w: 7.718584e-20}
+        outSlope: {x: -0.007749077, y: 0.006488797, z: -8.71795e-19, w: 7.718584e-20}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Arm_01_L/SKEL_MineCraft_Runner_Arm_02_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.40371516, y: 0.46763325, z: 0.632682, w: -0.46695468}
+        inSlope: {x: 0.026815653, y: -0.02479148, z: 0.029235363, w: 0.038130283}
+        outSlope: {x: 0.026815653, y: -0.02479148, z: 0.029235363, w: 0.038130283}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.4166667
+        value: {x: 0.435375, y: 0.43634337, z: 0.66658837, w: -0.41918153}
+        inSlope: {x: -0.040368687, y: 0.042620312, z: -0.042433273, w: -0.064609066}
+        outSlope: {x: -0.040368687, y: 0.042620312, z: -0.042433273, w: -0.064609066}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.40371516, y: 0.46763325, z: 0.632682, w: -0.46695468}
+        inSlope: {x: -0.021893967, y: 0.020231714, z: -0.023870934, w: -0.031118616}
+        outSlope: {x: -0.021893967, y: 0.020231714, z: -0.023870934, w: -0.031118616}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Arm_01_L/SKEL_MineCraft_Runner_Arm_02_L/SKEL_MineCraft_Runner_Arm_03_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.2709632, y: -0.6210312, z: 0.72784996, w: 0.10551602}
+        inSlope: {x: 0.0263021, y: 0.011867523, z: -0.0038924217, w: 0.028820693}
+        outSlope: {x: 0.0263021, y: 0.011867523, z: -0.0038924217, w: 0.028820693}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.45833334
+        value: {x: 0.2991164, y: -0.60756433, z: 0.7230098, w: 0.13657151}
+        inSlope: {x: -0.06955396, y: -0.03520059, z: 0.013645647, w: -0.07722668}
+        outSlope: {x: -0.06955396, y: -0.03520059, z: 0.013645647, w: -0.07722668}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.2709632, y: -0.6210312, z: 0.72784996, w: 0.10551602}
+        inSlope: {x: -0.021478405, y: -0.009685989, z: 0.003172873, w: -0.023534227}
+        outSlope: {x: -0.021478405, y: -0.009685989, z: 0.003172873, w: -0.023534227}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Arm_01_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.5498531, y: 0.8352614, z: -1.747622e-17, w: -8.48138e-17}
+        inSlope: {x: -0.008498669, y: 0.0055918694, z: -8.6270306e-19, w: 1.7787692e-19}
+        outSlope: {x: -0.008498669, y: 0.0055918694, z: -8.6270306e-19, w: 1.7787692e-19}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.625
+        value: {x: 0.54646844, y: 0.83747977, z: -1.7819308e-17, w: -8.474239e-17}
+        inSlope: {x: 0.029980645, y: -0.019562235, z: 3.0336338e-18, w: -6.379743e-19}
+        outSlope: {x: 0.029980645, y: -0.019562235, z: 3.0336338e-18, w: -6.379743e-19}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.5498531, y: 0.8352614, z: -1.747622e-17, w: -8.48138e-17}
+        inSlope: {x: 0.006947991, y: -0.0045719123, z: 7.053531e-19, w: -1.4547784e-19}
+        outSlope: {x: 0.006947991, y: -0.0045719123, z: 7.053531e-19, w: -1.4547784e-19}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Arm_01_R/SKEL_MineCraft_Runner_Arm_02_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.42675805, y: -0.4910398, z: 0.58324647, w: 0.48639593}
+        inSlope: {x: -0.014812231, y: -0.014279366, z: -0.015388012, w: 0.016993046}
+        outSlope: {x: -0.014812231, y: -0.014279366, z: -0.015388012, w: 0.016993046}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.45833334
+        value: {x: 0.40945312, y: -0.5070819, z: 0.56529754, w: 0.5056231}
+        inSlope: {x: 0.046517365, y: 0.04149341, z: 0.048189633, w: -0.050067894}
+        outSlope: {x: 0.046517365, y: 0.04149341, z: 0.048189633, w: -0.050067894}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.42675805, y: -0.4910398, z: 0.58324647, w: 0.48639593}
+        inSlope: {x: 0.012087816, y: 0.011658663, z: 0.012558455, w: -0.0138723785}
+        outSlope: {x: 0.012087816, y: 0.011658663, z: 0.012558455, w: -0.0138723785}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Arm_01_R/SKEL_MineCraft_Runner_Arm_02_R/SKEL_MineCraft_Runner_Arm_03_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.004657535, y: 0.70709145, z: 0.70709145, w: 0.004657535}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -0.004657535, y: 0.70709145, z: 0.70709145, w: 0.004657535}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Cape_01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -2.8669064e-17, y: 1.3859203e-16, z: 0.006586695, w: 0.9999783}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -2.8669064e-17, y: 1.3859203e-16, z: 0.006586695, w: 0.9999783}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Cape_01/SKEL_MineCraft_Runner_Cape_02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -2.775558e-17, y: 1.3877785e-16, z: 5.134781e-15, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -2.775558e-17, y: 1.3877785e-16, z: 5.134781e-15, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Cape_01/SKEL_MineCraft_Runner_Cape_02/SKEL_MineCraft_Runner_Cape_03
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -2.775558e-17, y: 1.3877785e-16, z: 5.134781e-15, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -2.775558e-17, y: 1.3877785e-16, z: 5.134781e-15, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Cape_01/SKEL_MineCraft_Runner_Cape_02/SKEL_MineCraft_Runner_Cape_03/SKEL_MineCraft_Runner_Cape_04
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Spine/SKEL_MineCraft_Runner_Cape_01/SKEL_MineCraft_Runner_Cape_02/SKEL_MineCraft_Runner_Cape_03/SKEL_MineCraft_Runner_Cape_04/SKEL_MineCraft_Runner_Cape_05
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.086741984, y: 0.70176625, z: 0.70176625, w: 0.086741984}
+        inSlope: {x: 0.007376611, y: 0.0009098053, z: 0.0009098053, w: -0.007376611}
+        outSlope: {x: 0.007376611, y: 0.0009098053, z: 0.0009098053, w: -0.007376611}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5416667
+        value: {x: -0.08027466, y: 0.70253545, z: 0.70253545, w: 0.08027466}
+        inSlope: {x: -0.03748048, y: -0.004284383, z: -0.004284383, w: 0.03748048}
+        outSlope: {x: -0.03748048, y: -0.004284383, z: -0.004284383, w: 0.03748048}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -0.086741984, y: 0.70176625, z: 0.70176625, w: 0.086741984}
+        inSlope: {x: -0.006015119, y: -0.0007424351, z: -0.0007424351, w: 0.006015119}
+        outSlope: {x: -0.006015119, y: -0.0007424351, z: -0.0007424351, w: 0.006015119}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Leg_01_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.96071744, y: 0.27752846, z: 1.6993718e-17, w: 5.8826974e-17}
+        inSlope: {x: -0.0062971115, y: 0.02175951, z: 8.837465e-18, w: -2.5612688e-18}
+        outSlope: {x: -0.0062971115, y: 0.02175951, z: 8.837465e-18, w: -2.5612688e-18}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5
+        value: {x: 0.955403, y: 0.2953052, z: 2.4197635e-17, w: 5.661135e-17}
+        inSlope: {x: 0.017530195, y: -0.056777332, z: -2.2956257e-17, w: 7.479165e-18}
+        outSlope: {x: 0.017530195, y: -0.056777332, z: -2.2956257e-17, w: 7.479165e-18}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.96071744, y: 0.27752846, z: 1.6993718e-17, w: 5.8826974e-17}
+        inSlope: {x: 0.005146978, y: -0.0177884, z: -7.224817e-18, w: 2.0925939e-18}
+        outSlope: {x: 0.005146978, y: -0.0177884, z: -7.224817e-18, w: 2.0925939e-18}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Leg_01_L/SKEL_MineCraft_Runner_Leg_02_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.41496336, y: 0.5725429, z: -0.41496336, w: 0.5725429}
+        inSlope: {x: -0.018997192, y: 0.013750076, z: 0.018997192, w: 0.013750076}
+        outSlope: {x: -0.018997192, y: 0.013750076, z: 0.018997192, w: 0.013750076}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.45833334
+        value: {x: 0.39529362, y: 0.58629596, z: -0.39529362, w: 0.58629596}
+        inSlope: {x: 0.04708206, y: -0.031789534, z: -0.04708206, w: -0.031789534}
+        outSlope: {x: 0.04708206, y: -0.031789534, z: -0.04708206, w: -0.031789534}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.41496336, y: 0.5725429, z: -0.41496336, w: 0.5725429}
+        inSlope: {x: 0.0155167505, y: -0.011233801, z: -0.0155167505, w: -0.011233801}
+        outSlope: {x: 0.0155167505, y: -0.011233801, z: -0.0155167505, w: -0.011233801}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Leg_01_L/SKEL_MineCraft_Runner_Leg_02_L/SKEL_MineCraft_Runner_Leg_03_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.27880314, y: 0.6492558, z: 0.6502206, w: 0.2791933}
+        inSlope: {x: 0.017149687, y: 0.007364273, z: 0.0073342323, w: -0.01713252}
+        outSlope: {x: 0.017149687, y: 0.007364273, z: 0.0073342323, w: -0.01713252}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.45833334
+        value: {x: -0.25967354, y: 0.6571525, z: 0.65808505, w: 0.26008528}
+        inSlope: {x: -0.049266808, y: -0.01953077, z: -0.019454237, w: 0.04921245}
+        outSlope: {x: -0.049266808, y: -0.01953077, z: -0.019454237, w: 0.04921245}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -0.27880314, y: 0.6492558, z: 0.6502206, w: 0.2791933}
+        inSlope: {x: -0.013997548, y: -0.0060138674, z: -0.0059895488, w: 0.013984674}
+        outSlope: {x: -0.013997548, y: -0.0060138674, z: -0.0059895488, w: 0.013984674}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Leg_01_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.4861311, y: 0.87388587, z: -8.3277024e-17, w: 2.3743134e-17}
+        inSlope: {x: -0.0057578087, y: 0.0032029152, z: 1.5659522e-19, w: 5.485994e-19}
+        outSlope: {x: -0.0057578087, y: 0.0032029152, z: 1.5659522e-19, w: 5.485994e-19}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7083333
+        value: {x: 0.48541245, y: 0.87428534, z: -8.325748e-17, w: 2.3811597e-17}
+        inSlope: {x: 0.01520527, y: -0.0084400205, z: -4.1419927e-19, w: -1.447871e-18}
+        outSlope: {x: 0.01520527, y: -0.0084400205, z: -4.1419927e-19, w: -1.447871e-18}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: 0.4861311, y: 0.87388587, z: -8.3277024e-17, w: 2.3743134e-17}
+        inSlope: {x: 0.00470495, y: -0.0026178348, z: -1.2784897e-19, w: -4.483052e-19}
+        outSlope: {x: 0.00470495, y: -0.0026178348, z: -1.2784897e-19, w: -4.483052e-19}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Leg_01_R/SKEL_MineCraft_Runner_Leg_02_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.50684595, y: 0.5357874, z: 0.5009829, w: 0.45283026}
+        inSlope: {x: -0.01764679, y: -0.01675129, z: 0.014924526, w: -0.016495228}
+        outSlope: {x: -0.01764679, y: -0.01675129, z: 0.014924526, w: -0.016495228}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.45833334
+        value: {x: -0.5254479, y: 0.51752037, z: 0.5166729, w: 0.43488652}
+        inSlope: {x: 0.04527425, y: 0.045994513, z: -0.038083784, w: 0.04507219}
+        outSlope: {x: 0.04527425, y: 0.045994513, z: -0.038083784, w: 0.04507219}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916667
+        value: {x: -0.50684595, y: 0.5357874, z: 0.5009829, w: 0.45283026}
+        inSlope: {x: 0.014409536, y: 0.013674253, z: -0.012186522, w: 0.013465398}
+        outSlope: {x: 0.014409536, y: 0.013674253, z: -0.012186522, w: 0.013465398}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root/SKEL_MineCraft_Runner_Leg_01_R/SKEL_MineCraft_Runner_Leg_02_R/SKEL_MineCraft_Runner_Leg_03_R
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 1.4210854e-15, y: 0.7485479, z: 0.41950268}
+        inSlope: {x: 1.5777217e-29, y: 0.056934614, z: -0.03944892}
+        outSlope: {x: 1.5777217e-29, y: 0.056934614, z: -0.03944892}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.33333334
+        value: {x: 1.4210854e-15, y: 0.8153605, z: 0.37321576}
+        inSlope: {x: 6.761666e-30, y: 0.10475529, z: -0.07258581}
+        outSlope: {x: 1.5777221e-29, y: 0.10477798, z: -0.07258503}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.75
+        value: {x: 1.4210854e-15, y: 0.75048494, z: 0.41816062}
+        inSlope: {x: 6.761662e-30, y: -0.08633215, z: 0.0598173}
+        outSlope: {x: 1.5777233e-29, y: -0.08634504, z: 0.059821043}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916666
+        value: {x: 1.4210854e-15, y: 0.7485479, z: 0.41950268}
+        inSlope: {x: 6.7616715e-30, y: -0.046492312, z: 0.032213505}
+        outSlope: {x: 6.7616715e-30, y: -0.046492312, z: 0.032213505}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SKEL_MineCraft_Runner_Root
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.4210854e-15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7916667
+        value: 1.4210854e-15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: RootT.x
+    path: 
+    classID: 95
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.7485479
+        inSlope: 0.05694008
+        outSlope: 0.05694008
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4166667
+        value: 0.8157955
+        inSlope: -0.08634567
+        outSlope: -0.08634567
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7916667
+        value: 0.7485479
+        inSlope: -0.04648874
+        outSlope: -0.04648874
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: RootT.y
+    path: 
+    classID: 95
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.41950268
+        inSlope: -0.039449215
+        outSlope: -0.039449215
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.33333334
+        value: 0.37321576
+        inSlope: -0.07258631
+        outSlope: -0.07258631
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.75
+        value: 0.41816062
+        inSlope: 0.05981723
+        outSlope: 0.05981723
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7916667
+        value: 0.41950268
+        inSlope: 0.03220938
+        outSlope: 0.03220938
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: RootT.z
+    path: 
+    classID: 95
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.38868496
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7916667
+        value: 0.38868496
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: RootQ.x
+    path: 
+    classID: 95
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.38868466
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7916667
+        value: 0.38868466
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: RootQ.y
+    path: 
+    classID: 95
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.5906981
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7916667
+        value: -0.5906981
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: RootQ.z
+    path: 
+    classID: 95
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.5906979
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7916667
+        value: 0.5906979
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: RootQ.w
+    path: 
+    classID: 95
+    script: {fileID: 0}
+    flags: 0
+  m_PPtrCurves: []
+  m_SampleRate: 24
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings: []
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0.041666668
+    m_StartTime: 0
+    m_StopTime: 0.7916667
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 1
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events: []

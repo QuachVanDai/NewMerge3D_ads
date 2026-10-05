@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_MeeleeGrunt 3
+  m_Controller: {fileID: 9100000, guid: 401c250d9179743409e77a3840a6eccf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ad3ef2e57592b534eb127f4c78fe8c8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1b7b8bf546476d94a8e16ae3bfe31be6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5ca42548478c5c943a0185c69fe96db3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3ffa4762b971c7b47b35c7ef54d52827, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5706bb2f4849ab04b8d376b8b4b22c61, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ccce921268c2bcd40bdcddc719cd5936, type: 2}

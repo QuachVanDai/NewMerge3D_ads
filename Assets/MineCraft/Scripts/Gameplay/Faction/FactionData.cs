@@ -29,5 +29,6 @@ namespace ExampleProject.Gameplay.Faction
         None = 0,
         Friendly = 1,
         Enemy = 2,
+        Enemy2 = 23,
     }
 }

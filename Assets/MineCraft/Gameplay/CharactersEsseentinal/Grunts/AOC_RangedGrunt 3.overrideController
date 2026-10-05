@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_RangedGrunt 3
+  m_Controller: {fileID: 9100000, guid: 401c250d9179743409e77a3840a6eccf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ad3ef2e57592b534eb127f4c78fe8c8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b080433779561064bb4e7e2de0229a80, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5ca42548478c5c943a0185c69fe96db3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a6f46b20a402db244a47854f38dae291, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5706bb2f4849ab04b8d376b8b4b22c61, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b43a3a3b43180914397cdc304f2a0b2b, type: 2}

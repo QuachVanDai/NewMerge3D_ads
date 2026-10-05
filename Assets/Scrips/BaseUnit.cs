@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using ExampleProject.Gameplay.Characters;
 using ExampleProject.Gameplay.Faction;
+using ExampleProject.Interface;
 using ExampleProject.UI.Shared;
 using UnityEngine;
 
@@ -13,10 +15,13 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] HealthBar healthBar;
     [SerializeField] FloatingTextSpawner floatingTextSpawner;
     [SerializeField] Transform hitPosTransform;
-    [SerializeField] float damageableDistance;
+    [SerializeField] int health;
+    [SerializeField] int damage;
 
     public int CurrentHealth { get; private set; }
-   public int MaxHealth { get; private set; }
+    public int MaxHealth { get; private set; }
+
+
     public void Init()
     {
         ShowUnit();
@@ -35,6 +40,7 @@ public class BaseUnit : MonoBehaviour
     }
     public void SetHealth()
     {
+        MaxHealth = health;
         CurrentHealth = MaxHealth;
         healthBar.Initialize(Faction);
     }
@@ -45,6 +51,10 @@ public class BaseUnit : MonoBehaviour
     public void PlayAttackAnim()
     {
         characterAnimator.Attack(1);
+    }
+    public void PlayMoveAnim()
+    {
+        characterAnimator.Run();
     }
     public void PlayPickUpAnim()
     {
@@ -66,6 +76,14 @@ public class BaseUnit : MonoBehaviour
     {
         transform.localScale = _newScale * Vector3.one;
     }
+    public void TakeDamage(int _damage)
+    {
+        CurrentHealth -= _damage;
+        var _healthPercent = (float)(CurrentHealth / MaxHealth * 100);
+        healthBar.SetHealthPercent(_healthPercent);
+    }
+
+
 }
 public enum UnitId
 {

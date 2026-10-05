@@ -27,8 +27,6 @@ namespace ExampleProject.Gameplay.Faction
 
         #region LifeCycle   
 
-
-
         #endregion
 
         #region Private Methods

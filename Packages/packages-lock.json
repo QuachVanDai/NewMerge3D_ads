@@ -68,7 +68,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.playworks.upp": {
-      "version": "file:C:/Users/Admin/Downloads/7.2.0/scripts",
+      "version": "file:/Users/mobione/Downloads/7.2.0/scripts",
       "depth": 0,
       "source": "local",
       "dependencies": {}

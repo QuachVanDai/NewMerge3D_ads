@@ -9,6 +9,7 @@ public class EnemyController : Singleton<EnemyController>
     [SerializeField] private List<UnitModeData> baseUnits;
 
     [SerializeField] SpawnInGrid enemySpawnInGrid;
+    public List<UnitModeData> BaseUnits => baseUnits;
     public void SetSpawnGrid(SpawnInGrid _enemySpawnInGrid)
     {
         enemySpawnInGrid = _enemySpawnInGrid;
@@ -29,7 +30,7 @@ public class EnemyController : Singleton<EnemyController>
 
     private void OnValidate()
     {
-       // SortBaseUnitsBySpawnIndex();
+        // SortBaseUnitsBySpawnIndex();
     }
 
     private void SortBaseUnitsBySpawnIndex()

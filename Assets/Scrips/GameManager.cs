@@ -11,16 +11,42 @@ public class GameManager : Singleton<GameManager>
     private SpawnInGrid friendlySpawnInGrid;
     private SpawnInGrid enemySpawnInGrid;
     public Transform UnitPlacement;
+    private StateGame stateGame;
+    public StateGame StateGame
+    {
+        get => stateGame;
+        set
+        {
+            stateGame = value;
+            ChangeState();
+        }
+    }
 
     FriendlyGridManager FriendlyGridManager => FriendlyGridManager.instance;
     MergeModeController MergeModeController => MergeModeController.instance;
     EnemyController EnemyController => EnemyController.instance;
+    private void ChangeState()
+    {
+        switch (stateGame)
+        {
+            case StateGame.Prepare:
+                StartCoroutine(Init());
+                break;
+            case StateGame.Merge:
+                break;
+            case StateGame.Fight:
+                break;
+            default:
+                Debug.LogWarning($"State chưa xử lý: {stateGame}");
+                break;
+        }
 
+    }
     private void Start()
     {
-        StartCoroutine(Init());
-       
+        StateGame = StateGame.Prepare;
     }
+
     public IEnumerator Init()
     {
         SpawnSpawnGrid();
@@ -30,7 +56,7 @@ public class GameManager : Singleton<GameManager>
         yield return StartCoroutine(FriendlyGridManager.SpawnFriendlyTiles());
         MergeModeController.Init();
         EnemyController.Init();
-         StartCoroutine(ZoomToBoss());
+        StartCoroutine(ZoomToBoss());
     }
     void SpawnSpawnGrid()
     {
@@ -52,8 +78,19 @@ public class GameManager : Singleton<GameManager>
 
         }
     }
-    IEnumerator ZoomToBoss(){
+    IEnumerator ZoomToBoss()
+    {
         yield return null;
 
     }
+    public void Fight()
+    {
+
+    }
+}
+public enum StateGame
+{
+    Prepare,
+    Merge,
+    Fight,
 }
