@@ -16,17 +16,19 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] FloatingTextSpawner floatingTextSpawner;
     [SerializeField] Transform hitPosTransform;
     [SerializeField] float health;
+    [SerializeField] GameObject effectPickUp;
     public float damage;
 
     [SerializeField] public float CurrentHealth;
     [SerializeField] public float MaxHealth;
+    public bool IsDead => CurrentHealth <= 0;
 
 
     public void Init()
     {
         ShowUnit();
         SetHealth();
-
+        EffectPickUp(false);
     }
     void ShowUnit()
     {
@@ -82,8 +84,21 @@ public class BaseUnit : MonoBehaviour
         var _healthPercent = CurrentHealth / MaxHealth * 100;
         Debug.Log("TakeDamage " + _damage + " CurrentHealth " + CurrentHealth + " MaxHealth " + MaxHealth + " _healthPercent " + _healthPercent);
         healthBar.SetHealthPercent(_healthPercent);
+        CheeckDeath();
     }
-
+ void CheeckDeath()
+    {
+        if (CurrentHealth <= 0)
+        {
+            CurrentHealth = 0;
+            characterAnimator.Death();
+        }
+    }
+    public void EffectPickUp(bool isShow)
+    {
+        if(effectPickUp)
+        effectPickUp.SetActive(isShow);
+    }
 
 }
 public enum UnitId

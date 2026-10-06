@@ -121,10 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd4c6183f95a4cb0a8f7191a7e16faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnEffect: {fileID: 8809996052052328131}
+  spawnEffect: {fileID: 8034644724006213529}
   meleeMergeableEffect: {fileID: 7915454229127331969}
   rangedMergeableEffect: {fileID: 6501098179874820062}
   tileRenderer: {fileID: 2954187000900982610}
+  unitOnTile: {fileID: 0}
   col: 0
   row: 0
 --- !u!1001 &5483404423541659751
@@ -175,14 +176,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1404728476631369108, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2564867658350252030, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
       propertyPath: m_Name
       value: PS_Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564867658350252030, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708911251996571798, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3916887021035824804, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
       propertyPath: mainParticleSystem
       value: 
       objectReference: {fileID: 2227825716026846308}
+    - target: {fileID: 4366373472611472349, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336100101291493713, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418144276281258255, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -204,17 +229,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1226248459021461158, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
   m_PrefabInstance: {fileID: 5483404423541659751}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8809996052052328131 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3916887021035824804, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
+--- !u!1 &8034644724006213529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2564867658350252030, guid: 881fe2394a13c45dd983caee93af181f, type: 3}
   m_PrefabInstance: {fileID: 5483404423541659751}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 602b5b990fef0d74eb05acd6e8bdccfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7321380326171746001
 PrefabInstance:
   m_ObjectHideFlags: 0

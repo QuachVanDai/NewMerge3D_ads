@@ -41,6 +41,7 @@ public class MergeModeController : Singleton<MergeModeController>
             if (baseUnits[i].indexSpawn == targetIndex)
             {
                 FriendlyGridManager.AssignUnitToSpawnGrid(baseUnits[i].unit, targetIndex);
+                FriendlyGridManager.PlaySpawnEffect( targetIndex);
                 baseUnits[i].unit.Init();
                 return baseUnits[i].unit;
             }

@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] Effect spawnEffect;
+    [SerializeField] GameObject spawnEffect;
     [SerializeField] GameObject meleeMergeableEffect;
     [SerializeField] GameObject rangedMergeableEffect;
     [SerializeField] Renderer tileRenderer;
@@ -138,7 +138,7 @@ public class Tile : MonoBehaviour
     // }
     public void PlaySpawnEffect()
     {
-        //spawnEffect.Play();
+        spawnEffect.SetActive(true);
     }
 
     #endregion

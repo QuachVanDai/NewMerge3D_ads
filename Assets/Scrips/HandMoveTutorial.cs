@@ -6,6 +6,8 @@ public class HandMoveTutorial : MonoBehaviour
     public Transform hand;
     public Transform pos1;
     public Transform pos2;
+    public BaseUnit unitMerge1;
+    public BaseUnit unitMerge2;
 
     [SerializeField] private float moveDuration = 0.5f;
     [SerializeField] private float waitDuration = 0.2f;
@@ -61,9 +63,24 @@ public class HandMoveTutorial : MonoBehaviour
         Vector3 startPosition = hand.position;
         float elapsed = 0f;
         float duration = Mathf.Max(0.01f, moveDuration);
-
+        unitMerge1.EffectPickUp(true);
         while (elapsed < duration)
         {
+            if (elapsed < 0.2f)
+            {
+                unitMerge1.EffectPickUp(true);
+                unitMerge2.EffectPickUp(false);
+            }
+            else if (elapsed > duration - 0.2f)
+            {
+                unitMerge1.EffectPickUp(false);
+                unitMerge2.EffectPickUp(true);
+            }
+            else
+            {
+                unitMerge1.EffectPickUp(false);
+                unitMerge2.EffectPickUp(false);
+            }
             elapsed += Time.deltaTime;
             hand.position = Vector3.Lerp(startPosition, targetPosition, elapsed / duration);
             yield return null;

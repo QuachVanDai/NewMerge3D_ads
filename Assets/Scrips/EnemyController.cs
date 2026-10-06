@@ -32,7 +32,18 @@ public class EnemyController : Singleton<EnemyController>
     {
         // SortBaseUnitsBySpawnIndex();
     }
-
+public void RemoveUnit(BaseUnit _unit)
+    {
+        for (int i = 0; i < baseUnits.Count; i++)
+        {
+            if (baseUnits[i].unit == _unit)
+            {
+                baseUnits[i].unit.gameObject.SetActive(false);
+                baseUnits.RemoveAt(i);
+                break;
+            }
+        }
+    }
     private void SortBaseUnitsBySpawnIndex()
     {
         baseUnits?.Sort((left, right) => left.indexSpawn.CompareTo(right.indexSpawn));

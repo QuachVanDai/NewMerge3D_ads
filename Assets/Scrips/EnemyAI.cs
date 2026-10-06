@@ -85,7 +85,7 @@ public class EnemyAI : MonoBehaviour
         for (int i = 0; i < MergeModeController.Instance.BaseUnits.Count; i++)
         {
             BaseUnit unit = MergeModeController.Instance.BaseUnits[i].unit;
-            if (unit == null) continue;
+            if (unit == null || unit.IsDead) continue;
 
             float distanceSqr = (transform.position - unit.transform.position).sqrMagnitude;
             if (distanceSqr > nearestDistanceSqr) continue;
@@ -108,6 +108,8 @@ public class EnemyAI : MonoBehaviour
     }
     public void OnAttackPointReachedListener()
     {
+        if (targetUnit == null || targetUnit.IsDead)
+            return;
         targetUnit.TakeDamage(thisBase.damage);
         Debug.Log("OnAttackPointReachedListener " + gameObject.name);
     }

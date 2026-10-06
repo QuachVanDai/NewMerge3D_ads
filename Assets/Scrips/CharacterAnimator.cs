@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+
 namespace ExampleProject.Gameplay.Characters
 {
     [RequireComponent(typeof(Animator))]
