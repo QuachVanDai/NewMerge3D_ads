@@ -4,6 +4,7 @@ using DG.Tweening;
 using ExampleProject.Gameplay.Faction;
 using Gradient = UnityEngine.Gradient;
 using ExampleProject.Tools;
+using System.Collections.Generic;
 
 namespace ExampleProject.UI.Shared
 {
@@ -12,7 +13,7 @@ namespace ExampleProject.UI.Shared
         #region Fields
 
         [SerializeField] FactionId faction;
-
+        [SerializeField] List<FactionData> FactionDatas;
         [SerializeField] Slider slider;
         [SerializeField] Image fillImage;
         [SerializeField] Image backgroundImage;
@@ -87,15 +88,19 @@ namespace ExampleProject.UI.Shared
         public void Initialize(FactionId _faction)
         {
             faction = _faction;
-            fillImage.sprite = Factions.GetResourceData(faction).healthBarForeground;
-            backgroundImage.sprite = Factions.GetResourceData(faction).healthBarBackground;
+            fillImage.sprite = GetResourceData(faction).healthBarForeground;
+            backgroundImage.sprite = GetResourceData(faction).healthBarBackground;
 
             // Default to 100 percent max health
             maxHealth = 100;
             slider.maxValue = maxHealth;
             SetHealth(100, false);
         }
-
+        public FactionData GetResourceData(FactionId _id)
+        {
+            var _data = FactionDatas.Find(x => x.id.Equals(_id));
+            return _data;
+        }
         #endregion
     }
 }

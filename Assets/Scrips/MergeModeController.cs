@@ -7,6 +7,8 @@ using UnityEngine;
 public class MergeModeController : Singleton<MergeModeController>
 {
     [SerializeField] private List<UnitModeData> baseUnits;
+    public List<UnitModeData> BaseUnits => baseUnits;
+
 
     FriendlyGridManager FriendlyGridManager => FriendlyGridManager.Instance;
 
@@ -61,6 +63,14 @@ public class MergeModeController : Singleton<MergeModeController>
     private void SortBaseUnitsBySpawnIndex()
     {
         baseUnits?.Sort((left, right) => left.indexSpawn.CompareTo(right.indexSpawn));
+    }
+
+    public void SetActiveCollider(bool isActive = true)
+    {
+        for (int i = 0; i < baseUnits.Count; i++)
+        {
+            baseUnits[i].unit.gameObject.GetComponent<Collider>().enabled = isActive;
+        }
     }
 }
 [Serializable]

@@ -6,6 +6,7 @@ public class CameraController : Singleton<CameraController>
     [SerializeField] Camera mainCamera;
     [SerializeField] Transform target;
     [SerializeField] Transform targetDefault;
+    [SerializeField] Transform targetBoss;
     [SerializeField] float duration = 0.5f;
 
     Tween moveTween;
@@ -17,7 +18,7 @@ public class CameraController : Singleton<CameraController>
         {
             SetDefault();
             return;
-        } 
+        }
 
         moveTween?.Kill();
         rotateTween?.Kill();
@@ -25,11 +26,15 @@ public class CameraController : Singleton<CameraController>
         moveTween = mainCamera.transform.DOMove(target.position, duration);
         rotateTween = mainCamera.transform.DORotate(target.eulerAngles, duration);
     }
-    public void Settarget(Transform _target)
+    public void SetTargetBoss()
+    {
+        target = targetBoss;
+    }
+    public void SetTarget(Transform _target)
     {
         target = _target;
     }
-      public void SetDefault()
+    public void SetDefault()
     {
         target = targetDefault;
     }

@@ -24,7 +24,7 @@ namespace ExampleProject.Tools
         static List<GameObject> tempList = new List<GameObject>();
 
 
-       Dictionary<GameObject, List<GameObject>> pooledObjects = new Dictionary<GameObject, List<GameObject>>();
+        Dictionary<GameObject, List<GameObject>> pooledObjects = new Dictionary<GameObject, List<GameObject>>();
         Dictionary<GameObject, GameObject> spawnedObjects = new Dictionary<GameObject, GameObject>();
 
         public StartupPoolMode startupPoolMode;
@@ -136,8 +136,8 @@ namespace ExampleProject.Tools
                     {
                         trans = obj.transform;
                         trans.SetParent(parent);
-                        trans.SetLocalPositionAndRotation(position, rotation);
-                        obj.SetActive(true);
+                        trans.localPosition = position;
+                        trans.localEulerAngles = rotation.eulerAngles; obj.SetActive(true);
                         instance.spawnedObjects.Add(obj, prefab);
                         return obj;
                     }
@@ -146,7 +146,8 @@ namespace ExampleProject.Tools
                 obj = (GameObject)Object.Instantiate(prefab);
                 trans = obj.transform;
                 trans.SetParent(parent);
-                trans.SetLocalPositionAndRotation(position, rotation);
+                trans.localPosition = position;
+                trans.localEulerAngles = rotation.eulerAngles;
                 instance.spawnedObjects.Add(obj, prefab);
                 return obj;
             }
@@ -155,7 +156,8 @@ namespace ExampleProject.Tools
                 obj = (GameObject)Object.Instantiate(prefab);
                 trans = obj.GetComponent<Transform>();
                 trans.SetParent(parent);
-                trans.SetLocalPositionAndRotation(position, rotation);
+                trans.localPosition = position;
+                trans.localEulerAngles = rotation.eulerAngles;
                 return obj;
             }
         }

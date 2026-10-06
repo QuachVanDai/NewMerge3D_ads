@@ -20,6 +20,7 @@ namespace ExampleProject.Gameplay.Characters
         [SerializeField] protected AnimationClip jumpAnim;
         [SerializeField] protected List<AnimationClip> victoryAnim;
         [SerializeField] protected AnimationClip spawnAnim;
+        [SerializeField] protected List<AnimationClip> defeatAnim;
 
         Animator animator;
         public Action onAttackPointReached;
@@ -95,7 +96,8 @@ namespace ExampleProject.Gameplay.Characters
             else
             {
                 // Crossfade to different animation
-                Animator.CrossFade(_animationName, _fadeLength);
+                // Animator.CrossFade(_animationName, _fadeLength);
+                Animator.Play(_animationName, 0, 0);
             }
         }
         public void SetSpeed(float _speed)
@@ -228,7 +230,12 @@ namespace ExampleProject.Gameplay.Characters
             CrossFade(jumpAnim.name);
             SetSpeed(_speed);
         }
-
+        public void RandomDefeat()
+        {
+            AnimationClip _randomDefeat = defeatAnim[Random.Range(0, defeatAnim.Count)];
+            CrossFade(_randomDefeat.name);
+            SetSpeed(1);
+        }
         #endregion
     }
 }

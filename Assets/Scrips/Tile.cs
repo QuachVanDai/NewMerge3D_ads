@@ -138,7 +138,7 @@ public class Tile : MonoBehaviour
     // }
     public void PlaySpawnEffect()
     {
-        spawnEffect.Play();
+        //spawnEffect.Play();
     }
 
     #endregion

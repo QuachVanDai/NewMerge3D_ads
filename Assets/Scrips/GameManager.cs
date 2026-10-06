@@ -7,11 +7,12 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Transform environment;
     [SerializeField] private Transform friendlySpawnPoint;
     [SerializeField] private Transform enemySpawnPoint;
+    [SerializeField] private Transform handTutorial;
     [SerializeField] private Vector2 FormationSize;
     private SpawnInGrid friendlySpawnInGrid;
     private SpawnInGrid enemySpawnInGrid;
     public Transform UnitPlacement;
-    private StateGame stateGame;
+    [SerializeField] private StateGame stateGame;
     public StateGame StateGame
     {
         get => stateGame;
@@ -33,8 +34,13 @@ public class GameManager : Singleton<GameManager>
                 StartCoroutine(Init());
                 break;
             case StateGame.Merge:
+                HandMerge();
+                break;
+            case StateGame.PrepareFight:
+                HandPrepareFight();
                 break;
             case StateGame.Fight:
+                HandFight();
                 break;
             default:
                 Debug.LogWarning($"State chưa xử lý: {stateGame}");
@@ -57,6 +63,28 @@ public class GameManager : Singleton<GameManager>
         MergeModeController.Init();
         EnemyController.Init();
         StartCoroutine(ZoomToBoss());
+        yield return StartCoroutine(ZoomToBoss());
+        yield return StartCoroutine(ZoomToBattle());
+        yield return new WaitForSeconds(1f);
+        StateGame = StateGame.Merge;
+    }
+    void HandMerge()
+    {
+        handTutorial.gameObject.SetActive(true);
+        HomePopup.Instance.ShowPanelDragToMerge(true);
+    }
+
+    void HandPrepareFight()
+    {
+        handTutorial.gameObject.SetActive(false);
+        HomePopup.Instance.ShowPanelDragToMerge(false);
+        //
+        MergeModeController.SetActiveCollider(true);
+        HomePopup.Instance.ShowPanelFight(true);
+    }
+    void HandFight()
+    {
+        HomePopup.Instance.ShowPanelFight(false);
     }
     void SpawnSpawnGrid()
     {
@@ -80,8 +108,15 @@ public class GameManager : Singleton<GameManager>
     }
     IEnumerator ZoomToBoss()
     {
-        yield return null;
-
+        yield return new WaitForSeconds(1f);
+        CameraController.Instance.SetTargetBoss();
+        yield return new WaitForSeconds(1f);
+    }
+    IEnumerator ZoomToBattle()
+    {
+        yield return new WaitForSeconds(1.5f);
+        CameraController.Instance.SetDefault();
+        yield return new WaitForSeconds(1f);
     }
     public void Fight()
     {
@@ -92,5 +127,6 @@ public enum StateGame
 {
     Prepare,
     Merge,
+    PrepareFight,
     Fight,
 }

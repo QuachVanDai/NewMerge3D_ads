@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using ExampleProject.Gameplay.Characters;
 using ExampleProject.Interface;
 using UnityEngine;
 
@@ -8,28 +9,29 @@ public class UnitAI : MonoBehaviour
 {
     [SerializeField] BaseUnit thisBase;
     public RigidbodyVelocityTargetMovable TargetMovable;
+    public CharacterAnimator characterAnimator;
     public float AttackSpeed = 1f;
     public float Interval => 1f / AttackSpeed;
     public float LastAttackTime { get; private set; }
     [SerializeField] float damageableDistance;
     [SerializeField] BaseUnit targetUnit;
     [SerializeField]
-    protected virtual void OnEnable()
+    protected void OnEnable()
     {
         // Damageable.OnDie += OnDieListener;
         // BasicAttack.OnStartAttack += OnStartAttackListner;
-        // BasicAttack.OnAttackPointReached += OnAttackPointReachedListener;
+        characterAnimator.onAttackPointReached += OnAttackPointReachedListener;
 
         TargetMovable.OnStartMove += OnStartMoveListener;
         TargetMovable.OnStopMove += OnStopMoveListener;
         // EventDispatcher.Instance.AddListener(EventName.OnBattleStart, OnBattleStartListener);
-        // EventDispatcher.Instance.AddListener(EventName.OnVictory, OnVictoryListener);
+        //EventDispatcher.Instance.AddListener(EventName.OnVictory, OnVictoryListener);
     }
-    protected virtual void OnDisable()
+    protected void OnDisable()
     {
         // Damageable.OnDie -= OnDieListener;
         // BasicAttack.OnStartAttack -= OnStartAttackListner;
-        // BasicAttack.OnAttackPointReached -= OnAttackPointReachedListener;
+        characterAnimator.onAttackPointReached -= OnAttackPointReachedListener;
 
         TargetMovable.OnStartMove -= OnStartMoveListener;
         TargetMovable.OnStopMove -= OnStopMoveListener;
@@ -63,7 +65,6 @@ public class UnitAI : MonoBehaviour
 
         LastAttackTime = Time.time;
         thisBase.PlayAttackAnim();
-        Debug.Log("Attack");
     }
     public bool IsInAttackRange()
     {
@@ -104,5 +105,10 @@ public class UnitAI : MonoBehaviour
     {
         // if (!IsHasTarget)
         //     model.Idle();
+    }
+    public void OnAttackPointReachedListener()
+    {
+        targetUnit.TakeDamage(thisBase.damage);
+        Debug.Log("OnAttackPointReachedListener " + gameObject.name);
     }
 }

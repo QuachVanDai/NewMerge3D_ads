@@ -144,6 +144,7 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 6bc90a383e1f73945bac66ac717049b5, type: 2}
   - {fileID: 7400000, guid: 33a0cffc1133afd4a8a0d226f0458149, type: 2}
   spawnAnim: {fileID: 7400000, guid: 5458e7c539bea0449882b301f94ba969, type: 2}
+  defeatAnim: []
 --- !u!4 &3311722560641603768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5b9ee3e4e4975654b94060f827c9b194, type: 3}
@@ -157,12 +158,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3972665517514516320}
     m_Modifications:
+    - target: {fileID: 1277688483902545355, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277688484901226742, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1277688484901226743, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1277688484901226743, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777705248095986527, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: FactionDatas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777705248095986527, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: FactionDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dfd7204bedf5a854591f1026d173e3f1, type: 2}
+    - target: {fileID: 4777705248095986527, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: FactionDatas.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b4631c2d92ab83e4c8ce3a0e69612f46, type: 2}
+    - target: {fileID: 5078115118877535483, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6499572770894309158, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
@@ -289,6 +314,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1055280922641706248, guid: 332c095b5301b420a80083328dc3e364, type: 3}
+      propertyPath: m_Height
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055280922641706248, guid: 332c095b5301b420a80083328dc3e364, type: 3}
+      propertyPath: m_Radius
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055280922641706248, guid: 332c095b5301b420a80083328dc3e364, type: 3}
+      propertyPath: m_Center.z
+      value: -0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 1333190224279629689, guid: 332c095b5301b420a80083328dc3e364, type: 3}
       propertyPath: m_Name
       value: I_Melee_Spider
@@ -388,6 +425,8 @@ MonoBehaviour:
   hitPosTransform: {fileID: 7767695991634394008}
   health: 10
   damage: 1
+  CurrentHealth: 0
+  MaxHealth: 0
 --- !u!114 &8643383808316674752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisBase: {fileID: 4090103821734415178}
   TargetMovable: {fileID: 923921301783334269}
+  characterAnimator: {fileID: 5644831111218509326}
+  AttackSpeed: 1
   damageableDistance: 5
   targetUnit: {fileID: 0}
 --- !u!114 &923921301783334269

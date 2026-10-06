@@ -13,6 +13,7 @@ public class TouchInputController : Singleton<TouchInputController>
     [SerializeField] Camera cam;
     [SerializeField] BaseUnit chosenUnit;
     [SerializeField] public int originFriendlyTileIndex;
+    [SerializeField] public bool isMergeFirstFinished;
 
     #endregion
 
@@ -22,6 +23,7 @@ public class TouchInputController : Singleton<TouchInputController>
     EventDispatcher EventDispatcher => EventDispatcher.Instance;
     CursorControl CursorControl => CursorControl.Instance;
     MergeModeController MergeModeController => MergeModeController.Instance;
+    GameManager GameManager => GameManager.Instance;
     // MergeTutorialManager MergeTutorialManager => MergeTutorialManager.Instance;
 
     #endregion
@@ -31,9 +33,8 @@ public class TouchInputController : Singleton<TouchInputController>
 
     void Update()
     {
-        // if (MergeModeController.State != MergeModeState.Prepare)
-        //     return;
-
+        if (GameManager.StateGame != StateGame.Merge)
+            return;
         UpdateCenterGrid();
     }
 
@@ -90,7 +91,6 @@ public class TouchInputController : Singleton<TouchInputController>
                     && _hit.transform.TryGetComponent(out Tile tile))
             {
                 _currentFriendlyTileIndex = tile.Index;
-                Debug.Log("_currentFriendlyTileIndex " + _currentFriendlyTileIndex);
             }
             else
                 _currentFriendlyTileIndex = -1;
@@ -105,7 +105,6 @@ public class TouchInputController : Singleton<TouchInputController>
     {
         chosenUnit = _unit;
         chosenUnit.PlayPickUpAnim();
-        Debug.Log("PickUpCharacter " + chosenUnit.name);
         originFriendlyTileIndex = FriendlyGridManager.GetUnitTile(chosenUnit).Index;
         SetCursorParentCharacter(chosenUnit.transform);
         EventDispatcher.Dispatch(EventName.OnHoldCharacter, chosenUnit);
@@ -170,6 +169,8 @@ public class TouchInputController : Singleton<TouchInputController>
             FriendlyGridManager.SetUnitToTile(null, originFriendlyTileIndex);
             chosenUnit = null;
             EventDispatcher.Dispatch(EventName.OnReleaseCharacter, chosenUnit);
+            isMergeFirstFinished = true;
+            GameManager.StateGame = StateGame.PrepareFight;
         }
     }
 

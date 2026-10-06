@@ -15,11 +15,11 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] HealthBar healthBar;
     [SerializeField] FloatingTextSpawner floatingTextSpawner;
     [SerializeField] Transform hitPosTransform;
-    [SerializeField] int health;
-    [SerializeField] int damage;
+    [SerializeField] float health;
+    public float damage;
 
-    public int CurrentHealth { get; private set; }
-    public int MaxHealth { get; private set; }
+    [SerializeField] public float CurrentHealth;
+    [SerializeField] public float MaxHealth;
 
 
     public void Init()
@@ -76,10 +76,11 @@ public class BaseUnit : MonoBehaviour
     {
         transform.localScale = _newScale * Vector3.one;
     }
-    public void TakeDamage(int _damage)
+    public void TakeDamage(float _damage)
     {
         CurrentHealth -= _damage;
-        var _healthPercent = (float)(CurrentHealth / MaxHealth * 100);
+        var _healthPercent = CurrentHealth / MaxHealth * 100;
+        Debug.Log("TakeDamage " + _damage + " CurrentHealth " + CurrentHealth + " MaxHealth " + MaxHealth + " _healthPercent " + _healthPercent);
         healthBar.SetHealthPercent(_healthPercent);
     }
 

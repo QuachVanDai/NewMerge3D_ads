@@ -6,7 +6,16 @@ using UnityEngine.UI;
 public class HomePopup : Singleton<HomePopup>
 {
     public Button FightButton;
-
+    public Transform PanelDragToMerge;
+    public Transform PanelFight;
+    public void ShowPanelDragToMerge(bool isShow)
+    {
+        PanelDragToMerge.gameObject.SetActive(isShow);
+    }
+    public void ShowPanelFight(bool isShow)
+    {
+        PanelFight.gameObject.SetActive(isShow);
+    }
 
     void OnEnable()
     {
