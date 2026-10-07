@@ -16,9 +16,10 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] HealthBar healthBar;
     [SerializeField] FloatingTextSpawner floatingTextSpawner;
     [SerializeField] Transform hitPosTransform;
-    [SerializeField] float health;
     [SerializeField] GameObject effectPickUp;
+    public float health;
     public float damage;
+    public int damageBuf=100;
     public bool IsBot;
     public int indexTile;
     public float bigScale = 2;
@@ -97,6 +98,7 @@ public class BaseUnit : MonoBehaviour
     }
     public void TakeDamage(float _damage)
     {
+        _damage += Random.Range(-damageBuf, damageBuf);
         audioSource.PlayOneShot(soundAttack);
         CurrentHealth -= _damage;
         var _healthPercent = CurrentHealth / MaxHealth * 100;

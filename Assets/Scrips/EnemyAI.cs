@@ -15,6 +15,8 @@ public class EnemyAI : MonoBehaviour
     public float LastAttackTime { get; private set; }
     [SerializeField] float damageableDistance;
     [SerializeField] BaseUnit targetUnit;
+    public LookAtTargetY LookAtTargetY;
+
     [SerializeField]
     protected void OnEnable()
     {
@@ -68,7 +70,7 @@ public class EnemyAI : MonoBehaviour
     }
     public bool IsInAttackRange()
     {
-        if (targetUnit == null)
+        if (targetUnit == null || targetUnit.IsDead)
             return false;
         float _distance = (transform.position - targetUnit.transform.position).sqrMagnitude;
 
@@ -93,8 +95,12 @@ public class EnemyAI : MonoBehaviour
             nearestDistanceSqr = distanceSqr;
             nearestUnit = unit;
         }
+        if (nearestUnit)
+        {
+            targetUnit = nearestUnit;
+            LookAtTargetY.target = targetUnit.transform;
+        }
 
-        targetUnit = nearestUnit;
     }
     protected void OnStartMoveListener()
     {
@@ -111,6 +117,6 @@ public class EnemyAI : MonoBehaviour
         if (targetUnit == null || targetUnit.IsDead)
             return;
         targetUnit.TakeDamage(thisBase.damage);
-        targetUnit.SpawnEffectImpact();
+        thisBase.SpawnEffectImpact();
     }
 }

@@ -11,12 +11,12 @@ public class UnitAI : MonoBehaviour
     public RigidbodyVelocityTargetMovable TargetMovable;
     public CharacterAnimator characterAnimator;
     public Transform posEffectImpact;
-
+    public LookAtTargetY LookAtTargetY;
     public float AttackSpeed = 1f;
     public float Interval => 1f / AttackSpeed;
     public float LastAttackTime { get; private set; }
     [SerializeField] float damageableDistance;
-    [SerializeField] BaseUnit targetUnit;
+    public BaseUnit targetUnit;
     [SerializeField]
     protected void OnEnable()
     {
@@ -78,26 +78,51 @@ public class UnitAI : MonoBehaviour
         return _distance <= damageableDistance + 1;
     }
 
-
-    public void UnitNear()
-    {
-        BaseUnit nearestUnit = null;
-        float nearestDistanceSqr = 999;
-
-        for (int i = 0; i < EnemyController.Instance.BaseUnits.Count; i++)
+public void UnitNear()
+{
+    List<BaseUnit> availableUnits = new List<BaseUnit>();
+        if (targetUnit==null || targetUnit.IsDead)
         {
-            BaseUnit unit = EnemyController.Instance.BaseUnits[i].unit;
-            if (unit == null || unit.IsDead) continue;
+            for (int i = 0; i < EnemyController.Instance.BaseUnits.Count; i++)
+            {
+                BaseUnit unit = EnemyController.Instance.BaseUnits[i].unit;
 
-            float distanceSqr = (transform.position - unit.transform.position).sqrMagnitude;
-            if (distanceSqr > nearestDistanceSqr) continue;
+                if (unit == null || unit.IsDead)
+                    continue;
 
-            nearestDistanceSqr = distanceSqr;
-            nearestUnit = unit;
+                availableUnits.Add(unit);
+            }
+
+            if (availableUnits.Count == 0)
+            {
+                targetUnit = null;
+                return;
+            }
+
+            targetUnit = availableUnits[Random.Range(0, availableUnits.Count)];
+            if(targetUnit)
+            LookAtTargetY.target = targetUnit.transform;
         }
+}
+    // public void UnitNear()
+    // {
+    //     BaseUnit nearestUnit = null;
+    //     float nearestDistanceSqr = 999;
 
-        targetUnit = nearestUnit;
-    }
+    //     for (int i = 0; i < EnemyController.Instance.BaseUnits.Count; i++)
+    //     {
+    //         BaseUnit unit = EnemyController.Instance.BaseUnits[i].unit;
+    //         if (unit == null || unit.IsDead) continue;
+
+    //         float distanceSqr = (transform.position - unit.transform.position).sqrMagnitude;
+    //         if (distanceSqr > nearestDistanceSqr) continue;
+
+    //         nearestDistanceSqr = distanceSqr;
+    //         nearestUnit = unit;
+    //     }
+
+    //     targetUnit = nearestUnit;
+    // }
     protected void OnStartMoveListener()
     {
         thisBase.PlayMoveAnim();
@@ -113,6 +138,6 @@ public class UnitAI : MonoBehaviour
         if (targetUnit == null || targetUnit.IsDead)
             return;
         targetUnit.TakeDamage(thisBase.damage);
-        targetUnit.SpawnEffectImpact();
+        thisBase.SpawnEffectImpact();
     }
 }
