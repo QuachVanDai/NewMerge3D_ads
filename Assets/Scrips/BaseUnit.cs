@@ -6,6 +6,7 @@ using ExampleProject.Gameplay.Faction;
 using ExampleProject.Interface;
 using ExampleProject.UI.Shared;
 using UnityEngine;
+using VTLTools.Effect;
 
 public class BaseUnit : MonoBehaviour
 {
@@ -18,9 +19,16 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] float health;
     [SerializeField] GameObject effectPickUp;
     public float damage;
-
+    public bool IsBot;
+    public int indexTile;
+    public float bigScale = 2;
+    public AudioClip soundAttack;
+    public AudioSource audioSource;
     [SerializeField] public float CurrentHealth;
     [SerializeField] public float MaxHealth;
+    [SerializeField] public Effect effectImpact;
+    [SerializeField] Transform posEffectImpact;
+
     public bool IsDead => CurrentHealth <= 0;
 
 
@@ -29,6 +37,7 @@ public class BaseUnit : MonoBehaviour
         ShowUnit();
         SetHealth();
         EffectPickUp(false);
+
     }
     void ShowUnit()
     {
@@ -40,11 +49,19 @@ public class BaseUnit : MonoBehaviour
             characterAnimator.Idle();
         }
     }
+    public void SetBIgScale()
+    {
+        transform.localScale = Vector3.one * bigScale;
+    }
     public void SetHealth()
     {
         MaxHealth = health;
         CurrentHealth = MaxHealth;
         healthBar.Initialize(Faction);
+    }
+    public void RandomDance()
+    {
+        characterAnimator.RandomDance();
     }
     public void PlayIdleAnim()
     {
@@ -80,24 +97,50 @@ public class BaseUnit : MonoBehaviour
     }
     public void TakeDamage(float _damage)
     {
+        audioSource.PlayOneShot(soundAttack);
         CurrentHealth -= _damage;
         var _healthPercent = CurrentHealth / MaxHealth * 100;
-        Debug.Log("TakeDamage " + _damage + " CurrentHealth " + CurrentHealth + " MaxHealth " + MaxHealth + " _healthPercent " + _healthPercent);
         healthBar.SetHealthPercent(_healthPercent);
-        CheeckDeath();
+        floatingTextSpawner.SpawnFloatingText(_damage.ToString());
+        CheckDeath();
     }
- void CheeckDeath()
+    public void SpawnEffectImpact()
     {
-        if (CurrentHealth <= 0)
+        Effect _impact = Instantiate(effectImpact);
+        _impact.SetParentAndPos(posEffectImpact, posEffectImpact.localPosition);
+        _impact.PlayEffect();
+    }
+    void CheckDeath()
+    {
+        StartCoroutine(IE());
+        IEnumerator IE()
         {
-            CurrentHealth = 0;
-            characterAnimator.Death();
+            if (CurrentHealth <= 0)
+            {
+                CurrentHealth = 0;
+                characterAnimator.Death();
+
+                if (!IsBot)
+                {
+                    yield return new WaitForSeconds(0.7f);
+                    MergeModeController.Instance.RemoveUnit(this);
+                }
+                else
+                {
+                    yield return new WaitForSeconds(0.7f);
+                    EnemyController.Instance.RemoveUnit(this);
+                }
+                yield return null;
+                GameManager.Instance.CheckWin();
+                gameObject.SetActive(false);
+            }
         }
+
     }
     public void EffectPickUp(bool isShow)
     {
-        if(effectPickUp)
-        effectPickUp.SetActive(isShow);
+        if (effectPickUp)
+            effectPickUp.SetActive(isShow);
     }
 
 }

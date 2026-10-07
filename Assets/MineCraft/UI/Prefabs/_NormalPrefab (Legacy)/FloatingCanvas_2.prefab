@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 0
+  FactionDatas: []
   slider: {fileID: 1277688483902545355}
   fillImage: {fileID: 1277688484901226742}
   backgroundImage: {fileID: 1277688483675807329}

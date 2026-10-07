@@ -10,6 +10,8 @@ public class UnitAI : MonoBehaviour
     [SerializeField] BaseUnit thisBase;
     public RigidbodyVelocityTargetMovable TargetMovable;
     public CharacterAnimator characterAnimator;
+    public Transform posEffectImpact;
+
     public float AttackSpeed = 1f;
     public float Interval => 1f / AttackSpeed;
     public float LastAttackTime { get; private set; }
@@ -43,7 +45,7 @@ public class UnitAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.StateGame != StateGame.Fight)
+        if (GameManager.Instance.StateGame != StateGame.Fight || thisBase.IsDead)
             return;
         UnitNear();
         if (!targetUnit) return;
@@ -111,6 +113,6 @@ public class UnitAI : MonoBehaviour
         if (targetUnit == null || targetUnit.IsDead)
             return;
         targetUnit.TakeDamage(thisBase.damage);
-        Debug.Log("OnAttackPointReachedListener " + gameObject.name);
+        targetUnit.SpawnEffectImpact();
     }
 }

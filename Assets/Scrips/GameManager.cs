@@ -12,6 +12,10 @@ public class GameManager : Singleton<GameManager>
     private SpawnInGrid friendlySpawnInGrid;
     private SpawnInGrid enemySpawnInGrid;
     public Transform UnitPlacement;
+    public AudioClip soundWin;
+    public AudioClip soundLose;
+    public AudioClip soundBg;
+    public AudioSource audioSource;
     [SerializeField] private StateGame stateGame;
     public StateGame StateGame
     {
@@ -42,6 +46,12 @@ public class GameManager : Singleton<GameManager>
             case StateGame.Fight:
                 HandFight();
                 break;
+            case StateGame.Lose:
+                HandLose();
+                break;
+            case StateGame.Win:
+                HandWin();
+                break;
             default:
                 Debug.LogWarning($"State chưa xử lý: {stateGame}");
                 break;
@@ -56,6 +66,7 @@ public class GameManager : Singleton<GameManager>
     public IEnumerator Init()
     {
         SpawnSpawnGrid();
+        PlayMusic(soundBg);
         //
         FriendlyGridManager.SetSpawnGrid(friendlySpawnInGrid);
         EnemyController.SetSpawnGrid(enemySpawnInGrid);
@@ -70,6 +81,7 @@ public class GameManager : Singleton<GameManager>
     }
     void HandMerge()
     {
+        PlayMusic(soundBg);
         handTutorial.gameObject.SetActive(true);
         HomePopup.Instance.ShowPanelDragToMerge(true);
     }
@@ -85,6 +97,48 @@ public class GameManager : Singleton<GameManager>
     void HandFight()
     {
         HomePopup.Instance.ShowPanelFight(false);
+    }
+    public void CheckWin()
+    {
+        Debug.Log("check win");
+        if (MergeModeController.BaseUnits.Count == 0)
+        {
+            StateGame = StateGame.Lose;
+        }
+        else if (EnemyController.BaseUnits.Count == 0)
+        {
+            StateGame = StateGame.Win;
+        }
+    }
+    void HandWin()
+    {
+        StartCoroutine(IE());
+        IEnumerator IE()
+        {
+            MergeModeController.Dance();
+            yield return new WaitForSeconds(1f);
+            HomePopup.Instance.ShowPanelEndCard(EndCardType.Win);
+            PlayMusic(soundWin);
+        }
+    }
+
+    void HandLose()
+    {
+        StartCoroutine(IE());
+        IEnumerator IE()
+        {
+            EnemyController.Dance();
+            yield return new WaitForSeconds(1f);
+            HomePopup.Instance.ShowPanelEndCard(EndCardType.Lose);
+            PlayMusic(soundLose);
+        }
+    }
+    void PlayMusic(AudioClip _clip)
+    {
+        audioSource.clip = _clip;
+        audioSource.Play();
+        audioSource.loop = true;
+
     }
     void SpawnSpawnGrid()
     {
@@ -129,4 +183,6 @@ public enum StateGame
     Merge,
     PrepareFight,
     Fight,
+    Win,
+    Lose
 }

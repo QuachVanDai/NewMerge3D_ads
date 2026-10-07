@@ -43,7 +43,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.StateGame != StateGame.Fight)
+        if (GameManager.Instance.StateGame != StateGame.Fight || thisBase.IsDead)
             return;
         UnitNear();
         if (!targetUnit) return;
@@ -111,6 +111,6 @@ public class EnemyAI : MonoBehaviour
         if (targetUnit == null || targetUnit.IsDead)
             return;
         targetUnit.TakeDamage(thisBase.damage);
-        Debug.Log("OnAttackPointReachedListener " + gameObject.name);
+        targetUnit.SpawnEffectImpact();
     }
 }

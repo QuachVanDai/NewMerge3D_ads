@@ -138,6 +138,7 @@ public class Tile : MonoBehaviour
     // }
     public void PlaySpawnEffect()
     {
+        spawnEffect.SetActive(false);
         spawnEffect.SetActive(true);
     }
 

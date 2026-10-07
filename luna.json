@@ -1,7 +1,7 @@
 {
     "version": "7.2.0",
     "projectId": "5bcd357ec1c3543e9b70f50d369c6143",
-    "applicationID": 23960,
+    "applicationID": 21666,
     "creativeName": "",
     "pgServer": "EU",
     "window": {
@@ -80,8 +80,8 @@
             "externalSources": [],
             "externalJSLibraries": [],
             "scriptingDefines": [],
-            "msbuildVersion": "17.14",
-            "monoVersion": "10.0.5",
+            "msbuildVersion": "16.10",
+            "monoVersion": "9.0.3",
             "dotnetVersion": ""
         },
         "assets": {
@@ -122,7 +122,10 @@
                 "Stubs/AppsFlyer",
                 "Stubs/IronSource",
                 "Stubs/Vungle",
-                "Stubs/MoreMountains.NiceVibrations"
+                "Stubs/MoreMountains.NiceVibrations",
+                "Assets/MineCraft/UI/Art/Icon/T_Icon_Hero_GUI.png",
+                "Assets/MineCraft/UI/Art/Icon/T_Icon_Enemy_GUI.png",
+                "Assets/MineCraft/UI/Art/Icon/Level/T_Icon_Level1_GUI.png"
             ],
             "includes": [
                 "Assets/Resources/DOTweenSettings.asset"
@@ -1587,10 +1590,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.Experimental.Rendering.GraphicsFormatUtility",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.FrustumPlanes",
                 "excluded": true
             },
@@ -1739,15 +1738,7 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.PropertyHelper",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.PropertyName",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.Random",
                 "excluded": true
             },
             {
@@ -1924,10 +1915,6 @@
             },
             {
                 "name": "UnityEngine.TouchScreenKeyboard",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.TrailModule",
                 "excluded": true
             },
             {
@@ -2183,10 +2170,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.AudioClip",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.AudioListener",
                 "excluded": true
             },
@@ -2320,10 +2303,6 @@
             },
             {
                 "name": "UnityEngine.Joint",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.ParticleSystem",
                 "excluded": true
             },
             {
@@ -4380,7 +4359,7 @@
             },
             {
                 "name": "UnityEngine.ParticleSystemStopBehavior",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.ParticleSystemSubEmitterProperties",
@@ -4920,7 +4899,7 @@
             },
             {
                 "name": "UnityEngine.RenderTextureReadWrite",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.Resources.PrefabNotFoundException",
@@ -6595,10 +6574,6 @@
                 "excluded": true
             },
             {
-                "name": "DG.Tweening.DOVirtual",
-                "excluded": true
-            },
-            {
                 "name": "DG.Tweening.EaseFactory",
                 "excluded": true
             },
@@ -6663,19 +6638,11 @@
                 "excluded": true
             },
             {
-                "name": "DG.Tweening.Plugins.Vector2Plugin",
-                "excluded": true
-            },
-            {
                 "name": "DG.Tweening.Plugins.Vector3ArrayPlugin",
                 "excluded": true
             },
             {
                 "name": "DG.Tweening.Plugins.Vector4Plugin",
-                "excluded": true
-            },
-            {
-                "name": "DG.Tweening.Sequence",
                 "excluded": true
             },
             {
@@ -6692,10 +6659,6 @@
             },
             {
                 "name": "DG.Tweening.Plugins.DoublePlugin",
-                "excluded": true
-            },
-            {
-                "name": "DG.Tweening.Plugins.FloatPlugin",
                 "excluded": true
             },
             {
@@ -6776,7 +6739,7 @@
             },
             {
                 "name": "DG.Tweening.Core.SafeModeReport.SafeModeReportType",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "DG.Tweening.Core.TargetType",
@@ -6916,10 +6879,6 @@
             },
             {
                 "name": "DG.Tweening.DOTweenModuleSprite",
-                "excluded": true
-            },
-            {
-                "name": "DG.Tweening.DOTweenModuleUI",
                 "excluded": true
             },
             {
@@ -8219,10 +8178,6 @@
                 "excluded": true
             },
             {
-                "name": "ExampleProject.Tools.ObjectPool",
-                "excluded": true
-            },
-            {
                 "name": "ExampleProject.Tools.ObjectPoolExtensions",
                 "excluded": true
             },
@@ -8252,7 +8207,7 @@
             },
             {
                 "name": "EndCardType",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "EventDataBinder.AbstractFilter",
@@ -8264,11 +8219,11 @@
             },
             {
                 "name": "ExampleProject.Tools.ObjectPool.StartupPool",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "ExampleProject.Tools.ObjectPool.StartupPoolMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Member.Kind",
@@ -8291,16 +8246,16 @@
                 "excluded": false
             },
             {
-                "name": "VTLTools.Effect.Effect",
-                "excluded": false
-            },
-            {
                 "name": "VTLTools.Effect.MainParticleSystem",
                 "excluded": false
             },
             {
                 "name": "EventName",
                 "excluded": false
+            },
+            {
+                "name": "ExampleProject.UI.Shared.UIHideable",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -8960,7 +8915,7 @@
                 "instanceMethods": [
                     {
                         "name": "format",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "equals",
@@ -14162,7 +14117,7 @@
                     },
                     {
                         "name": "Sample",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "InternalSample",
@@ -14174,7 +14129,7 @@
                     },
                     {
                         "name": "Next$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Next$1",
@@ -14186,7 +14141,7 @@
                     },
                     {
                         "name": "NextDouble",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "NextBytes",
@@ -16148,7 +16103,7 @@
                     },
                     {
                         "name": "height#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "height#set",
@@ -16200,7 +16155,7 @@
                     },
                     {
                         "name": "width#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "width#set",
@@ -16312,7 +16267,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -18390,7 +18345,7 @@
                     },
                     {
                         "name": "name#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "mainTexture#get",
@@ -18398,7 +18353,7 @@
                     },
                     {
                         "name": "mainTexture#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "color#get",
@@ -18458,7 +18413,7 @@
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor2",
@@ -18566,7 +18521,7 @@
                     },
                     {
                         "name": "SetTexture$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetTexture",
@@ -20330,7 +20285,7 @@
                     },
                     {
                         "name": "anchoredPosition#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "anchoredPosition#set",
@@ -20346,7 +20301,7 @@
                     },
                     {
                         "name": "rect#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "cachedRect#get",
@@ -21848,7 +21803,7 @@
                     },
                     {
                         "name": "alpha#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "interactable#get",
@@ -22040,7 +21995,7 @@
                     },
                     {
                         "name": "IsRebuildingLayout",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IsRebuildingGraphics",
@@ -22992,7 +22947,7 @@
                     },
                     {
                         "name": "material#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "material#set",
@@ -23152,7 +23107,7 @@
                     },
                     {
                         "name": "OnTransformParentChanged",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnEnable",
@@ -23470,7 +23425,7 @@
                     },
                     {
                         "name": "OnTransformParentChanged",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ParentMaskStateChanged",
@@ -23656,7 +23611,7 @@
                     },
                     {
                         "name": "fillAmount#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fillAmount#set",
@@ -23832,11 +23787,11 @@
                     },
                     {
                         "name": "texture#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "mainTexture#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "uvRect#get",
@@ -23868,7 +23823,7 @@
                     },
                     {
                         "name": "Awake",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDidApplyAnimationProperties",
@@ -24120,7 +24075,7 @@
                     },
                     {
                         "name": "text#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "font#get",
@@ -24280,7 +24235,7 @@
                     },
                     {
                         "name": "OnRectTransformDimensionsChange",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetGenerationSettings",
@@ -24854,15 +24809,15 @@
                 "instanceMethods": [
                     {
                         "name": "getDefaultValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Reset",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "getHashCode",
@@ -24874,7 +24829,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -25074,11 +25029,11 @@
                     },
                     {
                         "name": "RandomDance",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Death",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Run",
@@ -25264,7 +25219,7 @@
                     },
                     {
                         "name": "PlaySpawnEffect",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -25348,7 +25303,7 @@
                     },
                     {
                         "name": "PlaySpawnEffect",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ClearAllTiles",
@@ -25455,6 +25410,22 @@
                     {
                         "name": "Fight",
                         "excluded": true
+                    },
+                    {
+                        "name": "CheckWin",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HandWin",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HandLose",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayMusic",
+                        "excluded": false
                     }
                 ]
             },
@@ -26262,7 +26233,7 @@
                     },
                     {
                         "name": "ShouldLogSafeModeCapturedError",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetDebugDataMessage",
@@ -26350,7 +26321,7 @@
                     },
                     {
                         "name": "IsFlashEase",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -26368,7 +26339,7 @@
                     },
                     {
                         "name": "Add",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetTotErrors",
@@ -26416,15 +26387,15 @@
                     },
                     {
                         "name": "GetSequence",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetUpdateType",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddActiveTweenToSequence",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DespawnAll",
@@ -26488,7 +26459,7 @@
                     },
                     {
                         "name": "Goto",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Pause",
@@ -26496,7 +26467,7 @@
                     },
                     {
                         "name": "Play",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayBackwards",
@@ -26626,7 +26597,7 @@
                     },
                     {
                         "name": "To$4",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "To$1",
@@ -26654,7 +26625,7 @@
                     },
                     {
                         "name": "To$11",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "To$12",
@@ -26762,7 +26733,7 @@
                     },
                     {
                         "name": "Sequence",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Sequence$1",
@@ -27392,7 +27363,7 @@
                     },
                     {
                         "name": "SetAutoKill$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetId$1",
@@ -27424,11 +27395,11 @@
                     },
                     {
                         "name": "SetLoops$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetEase$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetEase$4",
@@ -27452,11 +27423,11 @@
                     },
                     {
                         "name": "SetRecyclable$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetUpdate",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetUpdate$1",
@@ -27476,7 +27447,7 @@
                     },
                     {
                         "name": "OnStart",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnPlay",
@@ -27492,7 +27463,7 @@
                     },
                     {
                         "name": "OnUpdate",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnStepComplete",
@@ -27520,7 +27491,7 @@
                     },
                     {
                         "name": "Append",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Prepend",
@@ -27528,7 +27499,7 @@
                     },
                     {
                         "name": "Join",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Insert",
@@ -27556,7 +27527,7 @@
                     },
                     {
                         "name": "ValidateAddToSequence",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "From",
@@ -27588,7 +27559,7 @@
                     },
                     {
                         "name": "SetDelay",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetDelay$1",
@@ -27596,7 +27567,7 @@
                     },
                     {
                         "name": "SetRelative",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetRelative$1",
@@ -27612,7 +27583,7 @@
                     },
                     {
                         "name": "SetOptions$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetOptions$9",
@@ -27620,7 +27591,7 @@
                     },
                     {
                         "name": "SetOptions$8",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetOptions$13",
@@ -28090,11 +28061,11 @@
                     },
                     {
                         "name": "$ctor8",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor9",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor3",
@@ -28928,7 +28899,7 @@
                     },
                     {
                         "name": "GetCompatibleFormat",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ValidateRenderTextureDesc",
@@ -28944,7 +28915,7 @@
                     },
                     {
                         "name": "GetShadowSamplingModeForFormat",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetShadowSamplingModeForFormat$1",
@@ -29044,15 +29015,15 @@
                     },
                     {
                         "name": "$ctor5",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor6",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -29150,7 +29121,7 @@
                     },
                     {
                         "name": "Play",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayBackwards",
@@ -29230,7 +29201,7 @@
                     },
                     {
                         "name": "ElapsedDirectionalPercentage",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IsActive",
@@ -29320,7 +29291,35 @@
                     },
                     {
                         "name": "TakeDamage",
-                        "excluded": true
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsDead#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "RandomDance",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CheckDeath",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EffectPickUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetBIgScale",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SpawnEffectImpact",
+                        "excluded": false
                     }
                 ]
             },
@@ -29329,20 +29328,16 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
-                        "name": "EndCardType#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "EndCardType#set",
-                        "excluded": true
-                    },
-                    {
                         "name": "ChangeEndCardType",
                         "excluded": true
                     },
                     {
                         "name": "ShowCard",
-                        "excluded": true
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
                     }
                 ]
             },
@@ -29480,11 +29475,11 @@
                 "instanceMethods": [
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDisable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDestroy",
@@ -29492,15 +29487,15 @@
                     },
                     {
                         "name": "Show",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetAnchorPos",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ResetLocalScale",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -29514,7 +29509,7 @@
                     },
                     {
                         "name": "SpawnFloatingText",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SpawnFloatingCriticalText",
@@ -29552,7 +29547,7 @@
                     },
                     {
                         "name": "SetHealthPercent",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Initialize",
@@ -29582,15 +29577,15 @@
                     },
                     {
                         "name": "CreateRenderTexture",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "CreateMaterialInstance",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetupCamera",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "CleanupResources",
@@ -29598,7 +29593,7 @@
                     },
                     {
                         "name": "SetRenderSize",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RotateY",
@@ -29624,7 +29619,7 @@
                     },
                     {
                         "name": "OnEnable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Spawn",
@@ -29814,11 +29809,11 @@
                 "instanceMethods": [
                     {
                         "name": "ButtonCta#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnEnable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDisable",
@@ -29826,7 +29821,7 @@
                     },
                     {
                         "name": "OnListen",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -29937,6 +29932,14 @@
                     {
                         "name": "SortBaseUnitsBySpawnIndex",
                         "excluded": false
+                    },
+                    {
+                        "name": "Dance",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RemoveUnit",
+                        "excluded": false
                     }
                 ]
             },
@@ -30033,6 +30036,10 @@
                     {
                         "name": "OnFightButtonClicked",
                         "excluded": false
+                    },
+                    {
+                        "name": "ShowPanelEndCard",
+                        "excluded": false
                     }
                 ]
             },
@@ -30066,6 +30073,18 @@
                     },
                     {
                         "name": "SetActiveCollider",
+                        "excluded": false
+                    },
+                    {
+                        "name": "BaseUnits#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Dance",
+                        "excluded": false
+                    },
+                    {
+                        "name": "RemoveUnit$1",
                         "excluded": false
                     }
                 ]
@@ -30307,6 +30326,1028 @@
                         "excluded": true
                     }
                 ]
+            },
+            {
+                "className": "EnemyAI",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Interval#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryAttack",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsInAttackRange",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UnitNear",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartMoveListener",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStopMoveListener",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnAttackPointReachedListener",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.Sequence",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Setup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DoStartup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DoApplyTween",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ApplyInternalCycle",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StableSortSequencedObjs",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsAnyCallbackSet",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DoPrepend",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DoInsert",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DoAppendInterval",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DoPrependInterval",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DoInsertCallback",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateDelay",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Reset",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Validate",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Startup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ApplyTween",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.Plugins.FloatPlugin",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Reset",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFrom$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetFrom",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ConvertToStartValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetRelativeEndValue",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetChangeValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetSpeedBasedDuration",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EvaluateAndApply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.DOTweenModuleUI",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "DOFade",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DOFade$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOFade$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOFade$3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOFade$4",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOColor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOColor$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOColor$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOColor$3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOFillAmount",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DOGradientColor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOFlexibleSize",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOMinSize",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOPreferredSize",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOScale",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorPos",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorPosX",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorPosY",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorPos3D",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorPos3DX",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorPos3DY",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorPos3DZ",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorMax",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOAnchorMin",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOPivot",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOPivotX",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOPivotY",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOSizeDelta",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOPunchAnchorPos",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOShakeAnchorPos",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOShakeAnchorPos$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOJumpAnchorPos",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DONormalizedPos",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOHorizontalNormalizedPos",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOVerticalNormalizedPos",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DOCounter",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOText",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOBlendableColor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOBlendableColor$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOBlendableColor$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DOShapeCircle",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.AudioClip",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "name#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "name#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "length#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "EndCardData",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "VTLTools.Effect.Effect",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetParentAndPos",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayEffect",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.TrailModule",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "enabled#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "enabled#set",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.ParticleSystem",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "main#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "emission#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "colorBySpeed#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "colorOverLifetime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "rotationBySpeed#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "rotationOverLifetime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "shape#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "sizeBySpeed#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "sizeOverLifetime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "textureSheetAnimation#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "velocityOverLifetime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "noise#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "inheritVelocity#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "forceOverLifetime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "limitVelocityOverLifetime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "enableEmission#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "enableEmission#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxParticles#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxParticles#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "isPlaying#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "isPaused#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "isStopped#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "time#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "isEmitting#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "particleCount#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "duration#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "duration#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "loop#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "loop#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "startDelay#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "startDelay#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "prewarm#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "prewarm#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "simulationSpace#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "simulationSpace#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "simulationSpeed#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "simulationSpeed#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "useRigidbodyForVelocity#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "useRigidbodyForVelocity#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "useUnscaledTime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "useUnscaledTime#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "scalingMode#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "scalingMode#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "moveWithCustomTransform#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "moveWithCustomTransform#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "startSize3D#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "startSize3D#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "playOnAwake#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "playOnAwake#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetParticles",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetParticles",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetCustomParticleData",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsAlive",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Play",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Play$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Pause",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Pause$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Stop",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Stop$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Stop$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Emit",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Clear",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Simulate",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Random",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "value#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "onUnitSphere#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "insideUnitSphere#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "state#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "state#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "insideUnitCircle#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "rotation#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SpherePoint",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Range$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Range",
+                        "excluded": false
+                    },
+                    {
+                        "name": "InitState",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Experimental.Rendering.GraphicsFormatUtility",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetGraphicsFormat$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetGraphicsFormat$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetGraphicsFormat",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "ExampleProject.Tools.ObjectPool",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "instance#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CreateStartupPools",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CreatePool$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CreatePool",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Spawn$3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$5",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$4",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Spawn",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$9",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Spawn$8",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$11",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$7",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$10",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Spawn$6",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Recycle$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Recycle",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Recycle$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RecycleAll$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RecycleAll$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RecycleAll",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsSpawned",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CountPooled$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CountPooled",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CountSpawned$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CountSpawned",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CountAllPooled",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetPooled$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetPooled",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetSpawned$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetSpawned",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DestroyPooled",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DestroyPooled$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DestroyAll",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DestroyAll$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.PropertyHelper",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SetColor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetStruct",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetClass",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.DOVirtual",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Float",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Int",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Vector3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Color",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EasedValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EasedValue$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EasedValue$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EasedValue$3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EasedValue$4",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EasedValue$5",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EasedValue$6",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EasedValue$7",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DelayedCall",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.Plugins.Vector2Plugin",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Reset",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFrom$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetFrom",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ConvertToStartValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetRelativeEndValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetChangeValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetSpeedBasedDuration",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EvaluateAndApply",
+                        "excluded": false
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -30344,6 +31385,346 @@
                         "script": "",
                         "ext": "",
                         "name": "Resources/unity_builtin_extra/Default-Particle"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Bat_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Hammer_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Iron_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_SSJ2_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Scarlet_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Spider_D.png"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Potato_03_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Wol_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Angry_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Skin/Texture/T_Runner_Pool_D.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Props/Texture/T_MineCraft_TextureAtlas.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Props/Texture/T_Planet_01.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Smoke_04.jpg"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Bullet_02.jpg"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Smoke_01.jpg"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Shockwave_02.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Bullet_01.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Bullet_03.jpg"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Circle_02.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Props/Texture/T_Planet_03.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Shockwave_01.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Shockwave_02.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Smoke_06.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Smoke_02.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Circle_04.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Circle_07.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Skull_02.jpg"
+                    },
+                    {
+                        "maxWidth": 160,
+                        "maxHeight": 192,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Sprites/T_Icon_Hand_Tutorial_GUI.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 238,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Circle_06.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Smoke_03.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Smoke_05.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Star_02.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Square_04.jpg"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "crush",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/MineCraft/MaterialLibrary/Particles/Texture/T_Bullet_05.jpg"
                     }
                 ]
             },

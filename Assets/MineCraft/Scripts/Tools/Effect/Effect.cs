@@ -9,10 +9,31 @@ namespace VTLTools.Effect
 {
     public class Effect : MonoBehaviour
     {
-        // [SerializeField] MainParticleSystem mainParticleSystem;
-        // [SerializeField] bool isDestroyAfterStop = true;
-        // [SerializeField] List<ParticleSystem> particleSystems = new();
 
+        [SerializeField] private Transform particle;
+
+        private void OnEnable()
+        {
+            Destroy(gameObject, 1);
+        }
+        public void SetParentAndPos(Transform _parent, Vector3 _pos)
+        {
+            transform.parent = _parent;
+            transform.localPosition = _pos;
+            transform.localRotation = Quaternion.identity;
+        }
+        public void PlayEffect()
+        {
+            Transform particleRoot = particle != null ? particle : transform;
+
+            ParticleSystem[] particles =
+                particleRoot.GetComponentsInChildren<ParticleSystem>(true);
+
+            foreach (ParticleSystem ps in particles)
+            {
+                ps.Play(true);
+            }
+        }
         // public bool IsPlaying
         // {
         //     get

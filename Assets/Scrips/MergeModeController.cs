@@ -8,6 +8,8 @@ public class MergeModeController : Singleton<MergeModeController>
 {
     [SerializeField] private List<UnitModeData> baseUnits;
     public List<UnitModeData> BaseUnits => baseUnits;
+    public AudioClip audioClipMerge;
+    public AudioSource audioSource;
 
 
     FriendlyGridManager FriendlyGridManager => FriendlyGridManager.Instance;
@@ -22,7 +24,7 @@ public class MergeModeController : Singleton<MergeModeController>
             if (j < baseUnits.Count && baseUnits[j].indexSpawn == i)
             {
                 FriendlyGridManager.AssignUnitToSpawnGrid(baseUnits[j].unit, i);
-
+                FriendlyGridManager.PlaySpawnEffect(baseUnits[j].indexSpawn);
                 Vector3 _pos = FriendlyGridManager.GetTilePosition(baseUnits[j].indexSpawn);
                 baseUnits[j].unit.SetLocalPosition(_pos);
                 baseUnits[j].unit.Faction = FactionId.Friendly;
@@ -32,7 +34,13 @@ public class MergeModeController : Singleton<MergeModeController>
 
         }
     }
-
+    public void Dance()
+    {
+        for (int i = 0; i < baseUnits.Count; i++)
+        {
+            baseUnits[i].unit.RandomDance();
+        }
+    }
     public BaseUnit MergeUnit(int originIndex, int targetIndex)
     {
         RemoveUnit(originIndex);
@@ -41,8 +49,10 @@ public class MergeModeController : Singleton<MergeModeController>
             if (baseUnits[i].indexSpawn == targetIndex)
             {
                 FriendlyGridManager.AssignUnitToSpawnGrid(baseUnits[i].unit, targetIndex);
-                FriendlyGridManager.PlaySpawnEffect( targetIndex);
+                FriendlyGridManager.PlaySpawnEffect(targetIndex);
                 baseUnits[i].unit.Init();
+                baseUnits[i].unit.SetBIgScale();
+                audioSource.PlayOneShot(audioClipMerge);
                 return baseUnits[i].unit;
             }
         }
@@ -60,6 +70,17 @@ public class MergeModeController : Singleton<MergeModeController>
             }
         }
 
+    }
+    public void RemoveUnit(BaseUnit _unit)
+    {
+        for (int i = 0; i < baseUnits.Count; i++)
+        {
+            if (baseUnits[i].unit == _unit)
+            {
+                baseUnits.RemoveAt(i);
+                break;
+            }
+        }
     }
     private void SortBaseUnitsBySpawnIndex()
     {

@@ -21,24 +21,31 @@ public class EnemyController : Singleton<EnemyController>
         for (int i = 0; i < baseUnits.Count; i++)
         {
             Vector3 _pos = enemySpawnInGrid.GetSpawnPosition(baseUnits[i].indexSpawn);
+            FriendlyGridManager.Instance.PlaySpawnEffect(baseUnits[i].indexSpawn);
             baseUnits[i].unit.SetLocalPosition(_pos);
             baseUnits[i].unit.SetLocalRotation(Vector3.up * 180);
             baseUnits[i].unit.Faction = FactionId.Enemy;
             baseUnits[i].unit.Init();
         }
     }
+    public void Dance()
+    {
+        for (int i = 0; i < baseUnits.Count; i++)
+        {
 
+            baseUnits[i].unit.RandomDance();
+        }
+    }
     private void OnValidate()
     {
         // SortBaseUnitsBySpawnIndex();
     }
-public void RemoveUnit(BaseUnit _unit)
+    public void RemoveUnit(BaseUnit _unit)
     {
         for (int i = 0; i < baseUnits.Count; i++)
         {
             if (baseUnits[i].unit == _unit)
             {
-                baseUnits[i].unit.gameObject.SetActive(false);
                 baseUnits.RemoveAt(i);
                 break;
             }
