@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Transform friendlySpawnPoint;
     [SerializeField] private Transform enemySpawnPoint;
     [SerializeField] private Transform handTutorial;
+    [SerializeField] private GameObject gate;
     [SerializeField] private Vector2 FormationSize;
     private SpawnInGrid friendlySpawnInGrid;
     private SpawnInGrid enemySpawnInGrid;
@@ -16,6 +17,17 @@ public class GameManager : Singleton<GameManager>
     public AudioClip soundLose;
     public AudioClip soundBg;
     public AudioSource audioSource;
+    [LunaPlaygroundField("hpMeeNormal", 1, "Game Settings")] public float hpMeeNormal;
+    [LunaPlaygroundField("hpSpiderMan", 2, "Game Settings")] public float hpSpiderMan;
+    [LunaPlaygroundField("hpBoss", 3, "Game Settings")] public float hpBoss;
+    [LunaPlaygroundField("hpEnemy", 4, "Game Settings")] public float hpEnemy;
+    [LunaPlaygroundField("damageMeeNormal", 5, "Game Settings")] public float damageMeeNormal;
+    [LunaPlaygroundField("damageSpiderMan", 6, "Game Settings")] public float damageSpiderMan;
+    [LunaPlaygroundField("damageBoss", 7, "Game Settings")] public float damageBoss;
+    [LunaPlaygroundField("damageEnemy", 8, "Game Settings")] public float damageEnemy;
+    [LunaPlaygroundField("damageBuf", 9, "Game Settings")] public int damageBuf;
+    [LunaPlaygroundField("timeScale", 10, "Game Settings")] public float timeScale = 1.5f;
+
     [SerializeField] private StateGame stateGame;
     public StateGame StateGame
     {
@@ -97,10 +109,10 @@ public class GameManager : Singleton<GameManager>
     void HandFight()
     {
         HomePopup.Instance.ShowPanelFight(false);
+        Time.timeScale = timeScale;
     }
     public void CheckWin()
     {
-        Debug.Log("check win");
         if (MergeModeController.BaseUnits.Count == 0)
         {
             StateGame = StateGame.Lose;
@@ -115,8 +127,11 @@ public class GameManager : Singleton<GameManager>
         StartCoroutine(IE());
         IEnumerator IE()
         {
+            gate.SetActive(false);
+
+            Time.timeScale = 1;
             MergeModeController.Dance();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
             HomePopup.Instance.ShowPanelEndCard(EndCardType.Win);
             PlayMusic(soundWin);
         }
@@ -127,8 +142,11 @@ public class GameManager : Singleton<GameManager>
         StartCoroutine(IE());
         IEnumerator IE()
         {
+            gate.SetActive(false);
+
+            Time.timeScale = 1;
             EnemyController.Dance();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
             HomePopup.Instance.ShowPanelEndCard(EndCardType.Lose);
             PlayMusic(soundLose);
         }

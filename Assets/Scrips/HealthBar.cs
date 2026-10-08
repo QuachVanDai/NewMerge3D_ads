@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using ExampleProject.Gameplay.Faction;
-using Gradient = UnityEngine.Gradient;
-using ExampleProject.Tools;
 using System.Collections.Generic;
 
 namespace ExampleProject.UI.Shared

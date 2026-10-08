@@ -46,7 +46,12 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         if (GameManager.Instance.StateGame != StateGame.Fight || thisBase.IsDead)
+        {
+            targetUnit = null;
+            TargetMovable.StopMove();
             return;
+        }
+
         UnitNear();
         if (!targetUnit) return;
         if (IsInAttackRange())
@@ -75,33 +80,53 @@ public class EnemyAI : MonoBehaviour
         float _distance = (transform.position - targetUnit.transform.position).sqrMagnitude;
 
         // Add DamageableDistance to allow attacking when the target is too big and its center is outside of the attack range but its edge is still within the range
-        return _distance <= damageableDistance + 1;
+        return _distance <= damageableDistance;
     }
-
-
     public void UnitNear()
     {
-        BaseUnit nearestUnit = null;
-        float nearestDistanceSqr = 999;
-
-        for (int i = 0; i < MergeModeController.Instance.BaseUnits.Count; i++)
+        List<BaseUnit> aliveUnits = new List<BaseUnit>();
+        if (!targetUnit || targetUnit.IsDead)
         {
-            BaseUnit unit = MergeModeController.Instance.BaseUnits[i].unit;
-            if (unit == null || unit.IsDead) continue;
+            targetUnit = null;
+            foreach (var item in MergeModeController.Instance.BaseUnits)
+            {
+                BaseUnit unit = item.unit;
+                if (unit == null || unit.IsDead) continue;
 
-            float distanceSqr = (transform.position - unit.transform.position).sqrMagnitude;
-            if (distanceSqr > nearestDistanceSqr) continue;
+                aliveUnits.Add(unit);
+            }
 
-            nearestDistanceSqr = distanceSqr;
-            nearestUnit = unit;
-        }
-        if (nearestUnit)
-        {
-            targetUnit = nearestUnit;
+            if (aliveUnits.Count == 0) return;
+
+            targetUnit = aliveUnits[Random.Range(0, aliveUnits.Count)];
             LookAtTargetY.target = targetUnit.transform;
         }
 
     }
+
+    // public void UnitNear()
+    // {
+    //     BaseUnit nearestUnit = null;
+    //     float nearestDistanceSqr = 999;
+
+    //     for (int i = 0; i < MergeModeController.Instance.BaseUnits.Count; i++)
+    //     {
+    //         BaseUnit unit = MergeModeController.Instance.BaseUnits[i].unit;
+    //         if (unit == null || unit.IsDead) continue;
+
+    //         float distanceSqr = (transform.position - unit.transform.position).sqrMagnitude;
+    //         if (distanceSqr > nearestDistanceSqr) continue;
+
+    //         nearestDistanceSqr = distanceSqr;
+    //         nearestUnit = unit;
+    //     }
+    //     if (nearestUnit)
+    //     {
+    //         targetUnit = nearestUnit;
+    //         LookAtTargetY.target = targetUnit.transform;
+    //     }
+
+    // }
     protected void OnStartMoveListener()
     {
         thisBase.PlayMoveAnim();

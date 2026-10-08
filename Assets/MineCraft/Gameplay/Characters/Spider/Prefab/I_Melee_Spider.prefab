@@ -451,9 +451,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5730265140520826119, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730265140520826119, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730265140520826119, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730265140520826119, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6499572770894309158, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
       propertyPath: m_Name
       value: FloatingCanvas_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499572770894309158, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939010939840357530, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Text
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939010939840357530, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939010939840357530, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939010939840357530, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939010939840357530, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7453926038060388821, guid: e72d5ff6a3559c44bb0e4391dd825a11, type: 3}
       propertyPath: m_Pivot.x
@@ -692,12 +732,14 @@ MonoBehaviour:
   characterAnimator: {fileID: 5644831111218509326}
   Faction: 1
   unitID: 0
+  typeHpUnit: 0
+  level: {fileID: 0}
   healthBar: {fileID: 748499218762512290}
   floatingTextSpawner: {fileID: 2590389624883516656}
   hitPosTransform: {fileID: 7767695991634394008}
-  health: 10
   effectPickUp: {fileID: 0}
   damage: 1
+  health: 10
   IsBot: 0
   indexTile: 0
   bigScale: 2
@@ -706,6 +748,7 @@ MonoBehaviour:
   CurrentHealth: 0
   MaxHealth: 0
   effectImpact: {fileID: 0}
+  effectAround: {fileID: 0}
   posEffectImpact: {fileID: 1690508108745009305}
 --- !u!114 &8643383808316674752
 MonoBehaviour:
@@ -740,7 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  stopDistance: 0.1
+  stopDistance: 1
   rigid: {fileID: 8845033795176225144}
 --- !u!114 &7021020313599331245
 MonoBehaviour:

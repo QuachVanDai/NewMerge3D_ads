@@ -52,6 +52,8 @@ public class MergeModeController : Singleton<MergeModeController>
                 FriendlyGridManager.PlaySpawnEffect(targetIndex);
                 baseUnits[i].unit.Init();
                 baseUnits[i].unit.SetBIgScale();
+                baseUnits[i].unit.SetTextLevel();
+                baseUnits[i].unit.ShowEffectAround();
                 audioSource.PlayOneShot(audioClipMerge);
                 return baseUnits[i].unit;
             }

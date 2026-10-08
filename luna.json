@@ -1,8 +1,8 @@
 {
     "version": "7.2.0",
     "projectId": "5bcd357ec1c3543e9b70f50d369c6143",
-    "applicationID": 23960,
-    "creativeName": "",
+    "applicationID": 43325,
+    "creativeName": "HeroMergeBattke_V_01",
     "pgServer": "EU",
     "window": {
         "‐⁘": true
@@ -80,8 +80,8 @@
             "externalSources": [],
             "externalJSLibraries": [],
             "scriptingDefines": [],
-            "msbuildVersion": "17.14",
-            "monoVersion": "10.0.5",
+            "msbuildVersion": "16.10",
+            "monoVersion": "9.0.3",
             "dotnetVersion": ""
         },
         "assets": {
@@ -124,8 +124,7 @@
                 "Stubs/Vungle",
                 "Stubs/MoreMountains.NiceVibrations",
                 "Assets/MineCraft/UI/Art/Icon/T_Icon_Hero_GUI.png",
-                "Assets/MineCraft/UI/Art/Icon/T_Icon_Enemy_GUI.png",
-                "Assets/MineCraft/UI/Art/Icon/Level/T_Icon_Level1_GUI.png"
+                "Assets/MineCraft/UI/Art/Icon/T_Icon_Enemy_GUI.png"
             ],
             "includes": [
                 "Assets/Resources/DOTweenSettings.asset"
@@ -5051,7 +5050,7 @@
             },
             {
                 "name": "UnityEngine.Space",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.SpriteAlignment",
@@ -6747,7 +6746,7 @@
             },
             {
                 "name": "DG.Tweening.Core.TweenManager.CapacityIncreaseMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "DG.Tweening.Core.VisualManagerPreset",
@@ -8255,6 +8254,14 @@
             },
             {
                 "name": "ExampleProject.UI.Shared.UIHideable",
+                "excluded": true
+            },
+            {
+                "name": "TypeUnit",
+                "excluded": false
+            },
+            {
+                "name": "ObjectScale",
                 "excluded": true
             }
         ],
@@ -16973,7 +16980,7 @@
                     },
                     {
                         "name": "timeScale#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "smoothDeltaTime#get",
@@ -18953,7 +18960,7 @@
                     },
                     {
                         "name": "Rotate$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RotateAround",
@@ -25061,7 +25068,7 @@
                     },
                     {
                         "name": "RandomDefeat",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -25421,7 +25428,7 @@
                     },
                     {
                         "name": "HandLose",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayMusic",
@@ -26551,7 +26558,7 @@
                     },
                     {
                         "name": "IncreaseCapacities",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ManageOnRewindCallbackWhenAlreadyRewinded",
@@ -29320,6 +29327,22 @@
                     {
                         "name": "SpawnEffectImpact",
                         "excluded": false
+                    },
+                    {
+                        "name": "ShowEffectAround",
+                        "excluded": false
+                    },
+                    {
+                        "name": "damageBuf#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetTextLevel",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetDameHp",
+                        "excluded": false
                     }
                 ]
             },
@@ -29935,7 +29958,7 @@
                     },
                     {
                         "name": "Dance",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RemoveUnit",
@@ -31345,6 +31368,42 @@
                     },
                     {
                         "name": "EvaluateAndApply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "LookAtTargetY",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "LookAtTarget",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "RandomRotateY",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
                         "excluded": false
                     }
                 ]

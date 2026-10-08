@@ -6,6 +6,7 @@ using ExampleProject.Gameplay.Faction;
 using ExampleProject.Interface;
 using ExampleProject.UI.Shared;
 using UnityEngine;
+using UnityEngine.UI;
 using VTLTools.Effect;
 
 public class BaseUnit : MonoBehaviour
@@ -13,13 +14,15 @@ public class BaseUnit : MonoBehaviour
     public CharacterAnimator characterAnimator;
     public FactionId Faction;
     public UnitId unitID;
+    public TypeUnit typeHpUnit;
+    public Text level;
     [SerializeField] HealthBar healthBar;
     [SerializeField] FloatingTextSpawner floatingTextSpawner;
     [SerializeField] Transform hitPosTransform;
     [SerializeField] GameObject effectPickUp;
-    public float health;
     public float damage;
-    public int damageBuf=100;
+    public float health;
+    public int damageBuf => GameManager.Instance.damageBuf;
     public bool IsBot;
     public int indexTile;
     public float bigScale = 2;
@@ -28,6 +31,7 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] public float CurrentHealth;
     [SerializeField] public float MaxHealth;
     [SerializeField] public Effect effectImpact;
+    [SerializeField] public Transform effectAround;
     [SerializeField] Transform posEffectImpact;
 
     public bool IsDead => CurrentHealth <= 0;
@@ -54,8 +58,18 @@ public class BaseUnit : MonoBehaviour
     {
         transform.localScale = Vector3.one * bigScale;
     }
+    public void SetTextLevel()
+    {
+        level.text = "2";
+    }
+    public void ShowEffectAround()
+    {
+        if (effectAround)
+            effectAround.gameObject.SetActive(true);
+    }
     public void SetHealth()
     {
+        SetDameHp(typeHpUnit);
         MaxHealth = health;
         CurrentHealth = MaxHealth;
         healthBar.Initialize(Faction);
@@ -103,7 +117,7 @@ public class BaseUnit : MonoBehaviour
         CurrentHealth -= _damage;
         var _healthPercent = CurrentHealth / MaxHealth * 100;
         healthBar.SetHealthPercent(_healthPercent);
-        floatingTextSpawner.SpawnFloatingText(_damage.ToString());
+        floatingTextSpawner.SpawnFloatingText("-" + _damage.ToString());
         CheckDeath();
     }
     public void SpawnEffectImpact()
@@ -124,12 +138,10 @@ public class BaseUnit : MonoBehaviour
 
                 if (!IsBot)
                 {
-                    yield return new WaitForSeconds(0.7f);
                     MergeModeController.Instance.RemoveUnit(this);
                 }
                 else
                 {
-                    yield return new WaitForSeconds(0.7f);
                     EnemyController.Instance.RemoveUnit(this);
                 }
                 yield return null;
@@ -144,7 +156,37 @@ public class BaseUnit : MonoBehaviour
         if (effectPickUp)
             effectPickUp.SetActive(isShow);
     }
+    public void SetDameHp(TypeUnit typeHp)
+    {
+        switch (typeHp)
+        {
+            case TypeUnit.Boss:
+                health = GameManager.Instance.hpBoss;
+                damage = GameManager.Instance.damageBoss;
+                break;
+            case TypeUnit.SpiderMan:
+                health = GameManager.Instance.hpSpiderMan;
+                damage = GameManager.Instance.damageSpiderMan;
+                break;
+            case TypeUnit.MeeNormal:
+                health = GameManager.Instance.hpMeeNormal;
+                damage = GameManager.Instance.damageMeeNormal;
 
+                break;
+            case TypeUnit.Enemy:
+                health = GameManager.Instance.hpEnemy;
+                damage = GameManager.Instance.damageEnemy;
+                break;
+        }
+    }
+
+}
+public enum TypeUnit
+{
+    MeeNormal,
+    SpiderMan,
+    Boss,
+    Enemy,
 }
 public enum UnitId
 {

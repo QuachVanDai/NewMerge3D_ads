@@ -21,7 +21,7 @@ public class EnemyController : Singleton<EnemyController>
         for (int i = 0; i < baseUnits.Count; i++)
         {
             Vector3 _pos = enemySpawnInGrid.GetSpawnPosition(baseUnits[i].indexSpawn);
-            FriendlyGridManager.Instance.PlaySpawnEffect(baseUnits[i].indexSpawn);
+            // FriendlyGridManager.Instance.PlaySpawnEffect(baseUnits[i].indexSpawn);
             baseUnits[i].unit.SetLocalPosition(_pos);
             baseUnits[i].unit.SetLocalRotation(Vector3.up * 180);
             baseUnits[i].unit.Faction = FactionId.Enemy;

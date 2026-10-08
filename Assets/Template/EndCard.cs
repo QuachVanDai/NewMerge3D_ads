@@ -12,6 +12,7 @@ public class EndCard : MonoBehaviour
     public Text textCta;
     public Text textYouWin;
     public Image imgCTA;
+    public Image imgRibbon;
     public CharacterAnimator CharacterAnimator;
     public EndCardType EndCardType;
 
@@ -63,6 +64,8 @@ public class EndCard : MonoBehaviour
         textDes.text = _endCardData.desEndCard.ToUpper();
         textCta.text = _endCardData.ctaEndCard.ToUpper();
         textYouWin.text = _endCardData.youWinLose.ToUpper();
+        imgRibbon.sprite = _endCardData.spriteRibbon;
+        imgCTA.sprite = _endCardData.spriteCTA;
         Luna.Unity.LifeCycle.GameEnded();
     }
 
@@ -75,6 +78,8 @@ public class EndCardData
     public string desEndCard;
     public string ctaEndCard;
     public string youWinLose;
+    public Sprite spriteRibbon;
+    public Sprite spriteCTA;
     public EndCardData()
     {
 
@@ -84,6 +89,7 @@ public class EndCardData
         desEndCard = endCardData.desEndCard;
         ctaEndCard = endCardData.ctaEndCard;
         youWinLose = endCardData.youWinLose;
+        spriteRibbon = endCardData.spriteRibbon;
     }
 }
 public enum EndCardType
