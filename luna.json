@@ -2,7 +2,7 @@
     "version": "7.2.0",
     "projectId": "5bcd357ec1c3543e9b70f50d369c6143",
     "applicationID": 43325,
-    "creativeName": "HeroMergeBattke_V_01",
+    "creativeName": "HeroMergeBattke_V_01_minte",
     "pgServer": "EU",
     "window": {
         "‐⁘": true
@@ -161,7 +161,7 @@
         "enableMecanimWASM": true,
         "minify": true,
         "forceUncompressed": false,
-        "forceBase64": false,
+        "forceBase64": true,
         "graphicsConstraint": 24,
         "genericCheck": true,
         "disableAntiAliasing": true,
@@ -6565,10 +6565,6 @@
                 "excluded": true
             },
             {
-                "name": "DG.Tweening.Core.Extensions",
-                "excluded": true
-            },
-            {
                 "name": "DG.Tweening.DOCurve.CubicBezier",
                 "excluded": true
             },
@@ -6578,10 +6574,6 @@
             },
             {
                 "name": "DG.Tweening.Plugins.Core.PathCore.ControlPoint",
-                "excluded": true
-            },
-            {
-                "name": "DG.Tweening.Plugins.Core.SpecialPluginsUtils",
                 "excluded": true
             },
             {
@@ -6634,10 +6626,6 @@
             },
             {
                 "name": "DG.Tweening.Plugins.UintPlugin",
-                "excluded": true
-            },
-            {
-                "name": "DG.Tweening.Plugins.Vector3ArrayPlugin",
                 "excluded": true
             },
             {
@@ -6814,7 +6802,7 @@
             },
             {
                 "name": "DG.Tweening.ShakeRandomnessMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "DG.Tweening.SpiralMode",
@@ -8230,7 +8218,7 @@
             },
             {
                 "name": "UnitId",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "ExampleProject.Interface.ITargetMovable",
@@ -8692,7 +8680,7 @@
                     },
                     {
                         "name": "toString",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "parse",
@@ -21818,7 +21806,7 @@
                     },
                     {
                         "name": "interactable#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "blocksRaycasts#get",
@@ -21826,7 +21814,7 @@
                     },
                     {
                         "name": "blocksRaycasts#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ignoreParentGroups#get",
@@ -24624,15 +24612,15 @@
                 "instanceMethods": [
                     {
                         "name": "getDefaultValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Reset",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "getHashCode",
@@ -24644,7 +24632,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -24742,7 +24730,7 @@
                     },
                     {
                         "name": "DOStartupSpecials",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOStartupDurationBased",
@@ -25227,6 +25215,10 @@
                     {
                         "name": "PlaySpawnEffect",
                         "excluded": false
+                    },
+                    {
+                        "name": "SetCollider",
+                        "excluded": false
                     }
                 ]
             },
@@ -25342,6 +25334,10 @@
                     },
                     {
                         "name": "IsCanMerge",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetAllColliderTiles",
                         "excluded": false
                     }
                 ]
@@ -25478,7 +25474,7 @@
                     },
                     {
                         "name": "SetNewParentCharacter",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "EventDispatcher#get",
@@ -26282,7 +26278,7 @@
                     },
                     {
                         "name": "Vector3FromAngle",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Angle2D",
@@ -26462,7 +26458,7 @@
                     },
                     {
                         "name": "ForceInit",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Goto",
@@ -26724,7 +26720,7 @@
                     },
                     {
                         "name": "Shake",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Shake$1",
@@ -26732,11 +26728,11 @@
                     },
                     {
                         "name": "Shake$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ToArray",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Sequence",
@@ -27152,7 +27148,7 @@
                     },
                     {
                         "name": "DOScale",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOScaleX",
@@ -27514,7 +27510,7 @@
                     },
                     {
                         "name": "AppendInterval",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PrependInterval",
@@ -27594,7 +27590,7 @@
                     },
                     {
                         "name": "SetOptions$9",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetOptions$8",
@@ -27634,7 +27630,7 @@
                     },
                     {
                         "name": "SetOptions$11",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetOptions$10",
@@ -29266,7 +29262,7 @@
                     },
                     {
                         "name": "PlayIdleAnim",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayAttackAnim",
@@ -30438,7 +30434,7 @@
                     },
                     {
                         "name": "DoAppendInterval",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DoPrependInterval",
@@ -30582,11 +30578,11 @@
                     },
                     {
                         "name": "DOAnchorPos",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOAnchorPosX",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOAnchorPosY",
@@ -30638,7 +30634,7 @@
                     },
                     {
                         "name": "DOShakeAnchorPos",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOShakeAnchorPos$1",
@@ -31404,6 +31400,144 @@
                     },
                     {
                         "name": "Update",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "BossIncomingAnimation",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "inherits",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Initialize",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ResetAnimation",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayStripes",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StopStripes",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Play",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDestroy$1",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.Core.Extensions",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SetSpecialStartupMode",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Blendable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "NoFrom",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.Plugins.Vector3ArrayPlugin",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Reset",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFrom$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetFrom",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ConvertToStartValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetRelativeEndValue",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetChangeValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetSpeedBasedDuration",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EvaluateAndApply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.Plugins.Core.SpecialPluginsUtils",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SetLookAt",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetPunch",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetShake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetCameraShakePosition",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UISpawner",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Spawn",
                         "excluded": false
                     }
                 ]

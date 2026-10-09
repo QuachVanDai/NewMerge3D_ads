@@ -126,6 +126,7 @@ MonoBehaviour:
   rangedMergeableEffect: {fileID: 6501098179874820062}
   tileRenderer: {fileID: 2954187000900982610}
   unitOnTile: {fileID: 0}
+  collider3D: {fileID: 1878174244742412640}
   col: 0
   row: 0
 --- !u!1001 &5483404423541659751

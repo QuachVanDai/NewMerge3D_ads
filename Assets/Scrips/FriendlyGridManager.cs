@@ -88,6 +88,13 @@ public class FriendlyGridManager : Singleton<FriendlyGridManager>
             //  _tile.ClearGrid();
         }
     }
+    public void SetAllColliderTiles()
+    {
+        foreach (var _tile in friendlyTiles)
+        {
+            _tile.SetCollider();
+        }
+    }
     public Renderer GetTileRenderer(int _index)
     {
         return friendlyTiles[_index].TileRenderer;

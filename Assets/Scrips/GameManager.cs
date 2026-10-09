@@ -17,15 +17,15 @@ public class GameManager : Singleton<GameManager>
     public AudioClip soundLose;
     public AudioClip soundBg;
     public AudioSource audioSource;
-    [LunaPlaygroundField("hpMeeNormal", 1, "Game Settings")] public float hpMeeNormal;
-    [LunaPlaygroundField("hpSpiderMan", 2, "Game Settings")] public float hpSpiderMan;
-    [LunaPlaygroundField("hpBoss", 3, "Game Settings")] public float hpBoss;
-    [LunaPlaygroundField("hpEnemy", 4, "Game Settings")] public float hpEnemy;
-    [LunaPlaygroundField("damageMeeNormal", 5, "Game Settings")] public float damageMeeNormal;
-    [LunaPlaygroundField("damageSpiderMan", 6, "Game Settings")] public float damageSpiderMan;
-    [LunaPlaygroundField("damageBoss", 7, "Game Settings")] public float damageBoss;
-    [LunaPlaygroundField("damageEnemy", 8, "Game Settings")] public float damageEnemy;
-    [LunaPlaygroundField("damageBuf", 9, "Game Settings")] public int damageBuf;
+    [LunaPlaygroundField("hpMeeNormal", 1, "Game Settings")] public float hpMeeNormal = 1000;
+    [LunaPlaygroundField("hpSpiderMan", 2, "Game Settings")] public float hpSpiderMan = 3000;
+    [LunaPlaygroundField("hpBoss", 3, "Game Settings")] public float hpBoss = 1500;
+    [LunaPlaygroundField("hpEnemy", 4, "Game Settings")] public float hpEnemy = 1000;
+    [LunaPlaygroundField("damageMeeNormal", 5, "Game Settings")] public float damageMeeNormal = 150;
+    [LunaPlaygroundField("damageSpiderMan", 6, "Game Settings")] public float damageSpiderMan = 300;
+    [LunaPlaygroundField("damageBoss", 7, "Game Settings")] public float damageBoss = 275;
+    [LunaPlaygroundField("damageEnemy", 8, "Game Settings")] public float damageEnemy = 125;
+    [LunaPlaygroundField("damageBuf", 9, "Game Settings")] public int damageBuf = 10;
     [LunaPlaygroundField("timeScale", 10, "Game Settings")] public float timeScale = 1.5f;
 
     [SerializeField] private StateGame stateGame;
@@ -89,6 +89,7 @@ public class GameManager : Singleton<GameManager>
         yield return StartCoroutine(ZoomToBoss());
         yield return StartCoroutine(ZoomToBattle());
         yield return new WaitForSeconds(1f);
+        FriendlyGridManager.SetAllColliderTiles();
         StateGame = StateGame.Merge;
     }
     void HandMerge()
@@ -182,6 +183,7 @@ public class GameManager : Singleton<GameManager>
     {
         yield return new WaitForSeconds(1f);
         CameraController.Instance.SetTargetBoss();
+        BossIncomingAnimation.Instance.Play();
         yield return new WaitForSeconds(1f);
     }
     IEnumerator ZoomToBattle()

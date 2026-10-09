@@ -13,7 +13,8 @@ public class Tile : MonoBehaviour
     [SerializeField] GameObject meleeMergeableEffect;
     [SerializeField] GameObject rangedMergeableEffect;
     [SerializeField] Renderer tileRenderer;
-    [SerializeField, ReadOnly] BaseUnit unitOnTile;
+    [SerializeField] BaseUnit unitOnTile;
+    [SerializeField] Collider collider3D;
     [ReadOnly] public int col;
     [ReadOnly] public int row;
 
@@ -111,6 +112,19 @@ public class Tile : MonoBehaviour
     public void SetCurrentCharacter(BaseUnit _unit)
     {
         unitOnTile = _unit;
+    }
+    public void SetCollider()
+    {
+        if (!unitOnTile)
+        {
+            collider3D.enabled = false;
+        }
+        else if (unitOnTile.unitID == UnitId.SpiderMan)
+        {
+            collider3D.enabled = true;
+        }
+        else
+            collider3D.enabled = false;
     }
 
     public BaseUnit GetCurrentCharacter()
